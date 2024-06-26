@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<loadFolders>
+  <v1.5>
+    <li>Common</li>
+    <li>1.54</li>
+    <li IfModActive="Ludeon.RimWorld.Biotech">Compatibility/Ludeon.RimWorld.Biotech</li>
+    <li IfModActive="happybodi.coom">Compatibility/happybodi.coom</li>
+  </v1.5>
+</loadFolders>
