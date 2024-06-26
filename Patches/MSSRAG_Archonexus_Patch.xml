@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<Operation Class="PatchOperationAdd"> 
+    <xpath>Defs/ThingDef[defName="ArchonexusCore"]/comps</xpath>
+    <value>
+        <li Class="CompProperties_Glower">
+            <overlightRadius>7.0</overlightRadius>
+            <glowRadius>26</glowRadius>
+            <glowColor>(370,370,370,0)</glowColor>
+        </li>
+    </value>
+</Operation>
+
+<Operation Class="PatchOperationAdd"> 
+    <xpath>Defs/ThingDef[defName="ArchonexusCore"]/comps</xpath>
+    <value>
+        <li Class="CompProperties_Schedule">
+            <!-- Match plant growing times -->
+            <startTime>0.25</startTime>
+            <endTime>0.8</endTime>
+            <offMessage>Off for plant resting period</offMessage>
+        </li>
+    </value>
+</Operation>
+
+<Operation Class="PatchOperationAdd"> 
+    <xpath>Defs/ThingDef[defName="ArchonexusCore"]/comps</xpath>
+    <value>
+        <li Class="CompProperties_HeatPusher">
+            <compClass>CompHeatPusherPowered</compClass>
+            <heatPerSecond>3</heatPerSecond>
+        </li>
+    </value>
+</Operation>
+
+<Operation Class="PatchOperationAdd"> 
+    <xpath>Defs/ThingDef[defName="ArchonexusCore"]</xpath>
+    <value>
+        <specialDisplayRadius>15</specialDisplayRadius>
+    </value>
+</Operation>
+</Patch>
