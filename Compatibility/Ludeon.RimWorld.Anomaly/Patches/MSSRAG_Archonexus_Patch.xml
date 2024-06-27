@@ -19,7 +19,7 @@
             <!-- Match plant growing times -->
             <startTime>0.25</startTime>
             <endTime>0.8</endTime>
-            <offMessage>Off for plant resting period</offMessage>
+            <offMessage>Regathering energy...</offMessage>
         </li>
     </value>
 </Operation>
