@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+ <Defs>
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>MSSRAG_Anima_Axe</defName>
+    <label>Anima Axe</label>
+    <description>A weapon formed from the branches of an anima tree, with crystalised anima sap forming the edge of the blade. This weapon contains the essence of the tree that was felled to create it.</description>
+    <graphicData>
+      <texPath>WeaponMelee/Anima/AnimaAxe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	    <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+    <techLevel>Medieval</techLevel>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+
+    <statBases>
+      <WorkToMake>9000</WorkToMake>
+      <Mass>2.25</Mass>
+    </statBases>
+
+    <costStuffCount>80</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+
+    <weaponTags>
+      <li>MSSRAGAnimaWeapon</li>
+      <li>MedievalMeleeAdvanced</li>
+    </weaponTags>
+
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>2.35</cooldownTime>
+        <armorPenetration>0.3</armorPenetration>
+      </li>
+    </tools>
+	  <recipeMaker>
+      <researchPrerequisite>LongBlades</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+
+    <modExtensions>
+      <li Class="VFECore.ThingDefExtension">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>
