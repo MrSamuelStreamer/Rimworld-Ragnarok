@@ -8,24 +8,22 @@
       <texPath>Things/Item/Equipment/WeaponMelee/AnimaAxe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <techLevel>Medieval</techLevel>
+    <techLevel>Tribal</techLevel>
     <equippedAngleOffset>-65</equippedAngleOffset>
-
     <statBases>
-      <WorkToMake>9000</WorkToMake>
-      <Mass>1.75</Mass>
+      <MaxHitPoints>280</MaxHitPoints>
+      <MarketValue>810</MarketValue>
+      <WorkToMake>4800</WorkToMake>
+      <Mass>2</Mass>
     </statBases>
-
-    <costStuffCount>80</costStuffCount>
-    <stuffCategories>
-      <li>Woody</li>
-    </stuffCategories>
-
+    <costList>
+      <MSSRAG_AnimaLog>1</MSSRAG_AnimaLog>
+      <MSSRAG_AnimaSap>1</MSSRAG_AnimaSap>
+      <AnimaFiber MayRequire="xrushha.animagear">15</AnimaFiber>
+    </costList>
     <weaponTags>
       <li>MSSRAGAnimaWeapon</li>
-      <li>MedievalMeleeAdvanced</li>
     </weaponTags>
-
     <tools>
       <li>
         <label>handle</label>
@@ -46,17 +44,10 @@
         <armorPenetration>0.3</armorPenetration>
       </li>
     </tools>
-	  <recipeMaker>
-      <researchPrerequisite>LongBlades</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>4</Crafting>
-      </skillRequirements>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
     </recipeMaker>
-
-    <modExtensions>
-      <li Class="VFECore.ThingDefExtension">
-        <usableWithShields>true</usableWithShields>
-      </li>
-    </modExtensions>
   </ThingDef>
 </Defs>
