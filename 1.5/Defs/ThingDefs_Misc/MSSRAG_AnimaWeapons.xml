@@ -8,8 +8,10 @@
       <texPath>Things/Item/Equipment/WeaponMelee/AnimaAxe</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <techLevel>Tribal</techLevel>
+    <techLevel>Neolithic</techLevel>
     <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories />
+    <costStuffCount />
     <statBases>
       <MaxHitPoints>280</MaxHitPoints>
       <MarketValue>810</MarketValue>
