@@ -21,5 +21,6 @@
     </modDependencies>
     <loadAfter>
         <li>Ludeon.RimWorld.Anomaly</li>
+        <li>DankPyon.Medieval.Overhaul</li>
     </loadAfter>
 </ModMetaData>
