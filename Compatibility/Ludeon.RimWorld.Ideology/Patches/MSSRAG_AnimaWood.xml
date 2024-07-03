@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <!-- Anima Tree Wood -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/plant</xpath>
+        <value>
+            <harvestedThingDef>MSSRAG_AnimaLog</harvestedThingDef>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]</xpath>
+        <value>
+            <modExtensions>
+            </modExtensions>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/modExtensions</xpath>
+        <value>
+            <li Class="MedievalOverhaul.SecondaryPlantDropExtension">
+                <secondaryDrop>MSSRAG_AnimaSap</secondaryDrop>
+                <secondaryDropAmountRange>20</secondaryDropAmountRange>
+                <secondaryDropChance>1</secondaryDropChance>
+                <secondaryNotWhenLeafless>false</secondaryNotWhenLeafless>
+            </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationRemove">
+        <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/comps/li[@Class = "CompProperties_Glower"]</xpath>
+    </Operation>
+</Patch>

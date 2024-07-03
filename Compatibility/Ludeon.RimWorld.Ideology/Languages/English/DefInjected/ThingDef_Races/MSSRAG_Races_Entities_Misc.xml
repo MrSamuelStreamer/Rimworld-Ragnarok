@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+    <VoidMonolith.label>Muspelsteinn</VoidMonolith.label>
+    <Shambler.label>Draugr</Shambler.label>
+    <Ghoul.label>Aptrganga</Ghoul.label>
+    <Revenant.label>Haugbúi</Revenant.label>
+    <Fleshbeasts.label>Skurðr</Fleshbeasts.label>
+    <Sightstealer.label>Augageld</Sightstealer.label>
+    <Noctol.label>Reimleikar</Noctol.label>
+    <Gorehulk.label>Risi</Gorehulk.label>
+    <Dreadmeld.label>Illr</Dreadmeld.label>
+    <Chimera.label>Hvatvetna</Chimera.label>
+    <Devourer.label>Svangr</Devourer.label>
+    <Metalhorror.label>Stalskrípi</Metalhorror.label>
+    <Nociosphere.label>Villieldr</Nociosphere.label>
+    <GoldenCube.label>Kynligr Gull</GoldenCube.label>
+    <UnnaturalCorpse.label>Líkhamr</UnnaturalCorpse.label>
+    <HarbingerTree.label>Blóð Eik</HarbingerTree.label>
+    <Deathpall.label>Dauðadagr</Deathpall.label>
+    <PitGate.label>Grǫf</PitGate.label>
+    <FleshmassHeart.label>Illrhjarta</FleshmassHeart.label>
+    <FleshmassNucleus.label>Illrheili</FleshmassNucleus.label>
+    <Noctolith.label>Myrkrsteinn</Noctolith.label>
+    <BloodRain.label>Blóðregn</BloodRain.label>
+    <TwistedObelisk.label>Holdsteinn</TwistedObelisk.label>
+    <CorruptedObelisk.label>Tveirsteinn</CorruptedObelisk.label>
+    <WarpedObelisk.label>Takasteinn</WarpedObelisk.label>
+    <VoidStructure.label>Veggr</VoidStructure.label>
+    <VoidNode.label>Kjarni</VoidNode.label>
+</LanguageData>
