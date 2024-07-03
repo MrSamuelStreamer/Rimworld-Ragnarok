@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThoughtDef Name="PsychicArchotechEmanator" Abstract="True">
+    <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="PsychicArchotechEmanator">        
+    <defName>PsychicArchotechEmanator_Major</defName>
+    <workerClass>ThoughtWorker_PsychicArchotechEmanator_Major</workerClass>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>archotech emanation</label>
+        <description>These thoughts coming from the structure, they open doors to such vastness... I feel so small that I might disappear.</description>
+        <baseMoodEffect>1</baseMoodEffect>
+      </li>
+      <li>
+        <label>archotech emanation</label>
+        <description>I can feel the edge of its wordless whispers... They make me uneasy.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="PsychicArchotechEmanator">        
+    <defName>PsychicArchotechEmanator_Grand</defName>
+    <workerClass>ThoughtWorker_PsychicArchotechEmanator_Grand</workerClass>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>archotech emanation</label>
+        <description>It makes me perceive so much. Eyeless knowledge of absolute existence, all minds speaking and dying and birthing at once. It's hard not to lose connection with myself.</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+      <li>
+        <label>archotech emanation</label>
+        <description>It pays no attention to me but I sense the edge of its perception. Flashes of terrifying timeless sight. Hard to ignore.</description>
+        <baseMoodEffect>7</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef ParentName="PsychicArchotechEmanator">        
+    <defName>PsychicArchotechEmanator_Core</defName>
+    <workerClass>ThoughtWorker_PsychicArchotechEmanator_Core</workerClass>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>World Tree's Protection</label>
+        <description>Even now the world tree keeps us safe from the unending darkess. It is our sanctuary in this cursed land.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+      <li>
+        <label>World Tree's Protection</label>
+        <description>Even now the world tree keeps us safe from the unending darkess. It is our sanctuary in this cursed land.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>
