@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <GenStepDef>
+        <defName>MSSRAG_Archonexus</defName>
+        <order>1601</order><!-- after fogged -->
+        <genStep Class="GenStep_ScatterLayout">
+            <count>1</count>
+            <allowRoofed>false</allowRoofed>
+            <minEdgeDistPct>0.166667</minEdgeDistPct>
+            <allowFoggedPositions>true</allowFoggedPositions>
+            <nearPlayerStart>true</nearPlayerStart>
+            <onlyOnStartingMap>true</onlyOnStartingMap>
+            <layout>
+                <li>
+                    <thing>ArchonexusCore</thing>
+                    <offset>(0, 0, 0)</offset>
+                </li>
+                <li>
+                    <thing>ArchotechTower</thing>
+                    <offset>(14, 0, 0)</offset>
+                </li>
+                <li>
+                    <thing>ArchotechTower</thing>
+                    <offset>(0, 0, 14)</offset>
+                </li>
+                <li>
+                    <thing>ArchotechTower</thing>
+                    <offset>(-14, 0, 0)</offset>
+                </li>
+                <li>
+                    <thing>ArchotechTower</thing>
+                    <offset>(0, 0, -14)</offset>
+                </li>
+            </layout>
+        </genStep>
+    </GenStepDef>
+</Defs>

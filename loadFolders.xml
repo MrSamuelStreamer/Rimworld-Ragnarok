@@ -3,6 +3,6 @@
   <v1.5>
     <li>Common</li>
     <li>1.5</li>
-    <li IfModActive="Ludeon.RimWorld.Anomaly">Compatibility/Ludeon.RimWorld.Anomaly</li>
+    <li IfModActive="Ludeon.RimWorld.Ideology">Compatibility/Ludeon.RimWorld.Ideology</li>
   </v1.5>
 </loadFolders>

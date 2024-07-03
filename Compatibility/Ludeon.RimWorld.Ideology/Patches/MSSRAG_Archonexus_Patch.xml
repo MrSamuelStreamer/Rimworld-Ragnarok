@@ -3,6 +3,18 @@
 <Patch>
     <!-- Archocore -->
     <Operation Class="PatchOperationAdd">
+        <xpath>Defs/MapGeneratorDef[defName="Base_Player"]/genSteps</xpath>
+        <value>
+            <li>MSSRAG_Archonexus</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="ArchonexusCore"]/thingClass</xpath>
+        <value>
+            <thingClass>Building</thingClass>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="ArchonexusCore"]/comps</xpath>
         <value>
             <li Class="CompProperties_Glower">
@@ -38,28 +50,16 @@
         <xpath>/Defs/ThingDef[defName="ArchonexusCore"]/comps/li[@Class = "CompProperties_PlantDamager"]</xpath>
     </Operation>
 
-    <Operation Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="ArchonexusCore"]/label</xpath>
-        <value>
-            <label>Trunk of the World Tree</label>
-        </value>
-    </Operation>
-
-    <Operation Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="ArchonexusCore"]/description</xpath>
-        <value>
-            <description>The withered remains of the world tree, reduced to a fraction of its former size thanks to the loss of the planet's sun. Though diminished, the world tree cannot die, and is the sole sustainer of life on this otherwise doomed planet.</description>
-        </value>
-    </Operation>
-
     <!-- Archotower -->
 
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="ArchotechTower"]</xpath>
-        <value>
-            <comps>
-            </comps>
-        </value>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="ArchotechTower"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="ArchotechTower"]</xpath>
+            <value>
+                <comps/>
+            </value>
+        </nomatch>
     </Operation>
 
     <Operation Class="PatchOperationAdd">
@@ -73,16 +73,6 @@
         </value>
     </Operation>
 
-    <Operation Class="PatchOperationAdd">
-        <xpath>Defs/ThingDef[defName="ArchotechTower"]/comps</xpath>
-        <value>
-            <li Class="CompProperties_Schedule">
-                <startTime>0.25</startTime>
-                <endTime>0.8</endTime>
-                <offMessage>Regathering energy...</offMessage>
-            </li>
-        </value>
-    </Operation>
 
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="ArchotechTower"]/comps</xpath>
@@ -98,20 +88,6 @@
         <xpath>Defs/ThingDef[defName="ArchotechTower"]</xpath>
         <value>
             <specialDisplayRadius>7</specialDisplayRadius>
-        </value>
-    </Operation>
-
-    <Operation Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="ArchotechTower"]/label</xpath>
-        <value>
-            <label>World Tree Roots</label>
-        </value>
-    </Operation>
-
-    <Operation Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="ArchotechTower"]/description</xpath>
-        <value>
-            <description>The ancient roots of the world tree. Once spanning the globe, these roots have receeded, but even in their weakened state the roots remain healthy, and would not persish from natural causes.</description>
         </value>
     </Operation>
 
