@@ -177,7 +177,7 @@ You are all alone.</description>
 					<def>DisableIncident</def>
 					<incident>HateChanters</incident>
 				</li>
-				<li Class="ScenPart_PermaGameCondition">
+				<li Class="ScenPart_PermaGameCondition" MayRequire="aranmaho.betterdarkness">
 					<def>PermanentGameCondition</def>
 					<gameCondition>BetterUnnaturalDarkness</gameCondition>
 				</li>

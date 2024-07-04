@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <ThingDef ParentName="BigBirdThingBase">
+        <defName>MSSRAG_Huginn</defName>
+        <label>Huginn</label>
+        <description>A large intelligent bird with beady eyes, it embodies the aspect of thought. With its violent nature, it's preferred drink is blood. Bother it, and it is guaranteed to seek revenge.</description>
+        <statBases>
+            <MoveSpeed>5.5</MoveSpeed>
+            <MarketValue>200</MarketValue>
+            <ComfyTemperatureMin>-8</ComfyTemperatureMin>
+            <ComfyTemperatureMax>50</ComfyTemperatureMax>
+            <FilthRate>8</FilthRate>
+        </statBases>
+        <race>
+            <herdAnimal>false</herdAnimal>
+            <baseBodySize>0.6</baseBodySize>
+            <baseHealthScale>0.9</baseHealthScale>
+            <baseHungerRate>0.28</baseHungerRate>
+            <foodType>VegetarianRoughAnimal</foodType>
+            <wildness>0.95</wildness>
+            <roamMtbDays>3</roamMtbDays>
+            <lifeExpectancy>45</lifeExpectancy>
+            <useMeatFrom>Cassowary</useMeatFrom>
+            <manhunterOnTameFailChance>1.00</manhunterOnTameFailChance>
+            <manhunterOnDamageChance>1.00</manhunterOnDamageChance>
+            <lifeStageAges>
+                <li>
+                    <def>AnimalBabyTiny</def>
+                    <minAge>0</minAge>
+                    <soundWounded>Pawn_Chick_Call</soundWounded>
+                    <soundDeath>Pawn_Chick_Call</soundDeath>
+                    <soundCall>Pawn_Chick_Call</soundCall>
+                    <soundAngry>Pawn_Chick_Call</soundAngry>
+                </li>
+                <li>
+                    <def>AnimalJuvenile</def>
+                    <minAge>0.1</minAge>
+                </li>
+                <li>
+                    <def>AnimalAdult</def>
+                    <minAge>0.2222</minAge>
+                </li>
+            </lifeStageAges>
+            <headPosPerRotation>
+                <li>(0.0, 0, 0.385)</li>
+                <li>(0.29, 0, 0.31)</li>
+                <li>(0.0, 0, 0.27)</li>
+                <li>(-0.29, 0, 0.31)</li>
+            </headPosPerRotation>
+        </race>
+        <comps>
+            <li Class="CompProperties_EggLayer">
+                <eggFertilizedDef>MSSRAG_EggHuginnFertilized</eggFertilizedDef>
+                <eggFertilizationCountMax>1</eggFertilizationCountMax>
+                <eggLayIntervalDays>3.33</eggLayIntervalDays>
+                <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+                <eggCountRange>1</eggCountRange>
+            </li>
+        </comps>
+        <tools>
+            <li>
+                <label>claws</label>
+                <capacities>
+                    <li>Scratch</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.5</cooldownTime>
+                <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+                <surpriseAttack>
+                    <extraMeleeDamages>
+                        <li>
+                            <def>Stun</def>
+                            <amount>14</amount>
+                        </li>
+                    </extraMeleeDamages>
+                </surpriseAttack>
+            </li>
+            <li>
+                <label>beak</label>
+                <capacities>
+                    <li>Bite</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
+                <surpriseAttack>
+                    <extraMeleeDamages>
+                        <li>
+                            <def>Stun</def>
+                            <amount>14</amount>
+                        </li>
+                    </extraMeleeDamages>
+                </surpriseAttack>
+            </li>
+            <li>
+                <label>head</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>6</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+        <tradeTags>
+            <li>AnimalUncommon</li>
+        </tradeTags>
+    </ThingDef>
+
+    <PawnKindDef ParentName="BigBirdKindBase">
+        <defName>MSSRAG_Huginn</defName>
+        <label>Huginn</label>
+        <race>MSSRAG_Huginn</race>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Animal/MSSRAG_Huginn/Huginn</texPath>
+                    <drawSize>1.0</drawSize>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Pawn/Animal/MSSRAG_Huginn/Dessicated_Huginn</texPath>
+                    <drawSize>1.0</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Animal/MSSRAG_Huginn/Huginn</texPath>
+                    <drawSize>1.3</drawSize>
+                    <shadowData>
+                        <volume>(0.3, 0.3, 0.3)</volume>
+                        <offset>(0,0,-0.3)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Pawn/Animal/MSSRAG_Huginn/Dessicated_Huginn</texPath>
+                    <drawSize>1.3</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Animal/MSSRAG_Huginn/Huginn</texPath>
+                    <drawSize>1.6</drawSize>
+                    <shadowData>
+                        <volume>(0.4, 0.4, 0.4)</volume>
+                        <offset>(0,0,-0.2)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Pawn/Animal/MSSRAG_Huginn/Dessicated_Huginn</texPath>
+                    <drawSize>1.6</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
+    <!--===============================================-->
+
+    <ThingDef ParentName="BigBirdThingBase">
+        <defName>MSSRAG_Muninn</defName>
+        <label>Muninn</label>
+        <description>A large unmodified bird species, Muninn embody the aspect of memory and are known for their fast travel, able to be eyes all over the world. They are easily angered.</description>
+        <statBases>
+            <MoveSpeed>6.0</MoveSpeed>
+            <MarketValue>250</MarketValue>
+            <ComfyTemperatureMin>-8</ComfyTemperatureMin>
+            <ComfyTemperatureMax>50</ComfyTemperatureMax>
+            <FilthRate>8</FilthRate>
+        </statBases>
+        <race>
+            <herdAnimal>false</herdAnimal>
+            <baseBodySize>1.0</baseBodySize>
+            <baseHealthScale>1.0</baseHealthScale>
+            <baseHungerRate>0.42</baseHungerRate>
+            <foodType>VegetarianRoughAnimal</foodType>
+            <wildness>0.95</wildness>
+            <roamMtbDays>3</roamMtbDays>
+            <lifeExpectancy>45</lifeExpectancy>
+            <useMeatFrom>Cassowary</useMeatFrom>
+            <manhunterOnTameFailChance>0.10</manhunterOnTameFailChance>
+            <manhunterOnDamageChance>1.00</manhunterOnDamageChance>
+            <lifeStageAges>
+                <li>
+                    <def>AnimalBabyTiny</def>
+                    <minAge>0</minAge>
+                    <soundWounded>Pawn_Chick_Call</soundWounded>
+                    <soundDeath>Pawn_Chick_Call</soundDeath>
+                    <soundCall>Pawn_Chick_Call</soundCall>
+                    <soundAngry>Pawn_Chick_Call</soundAngry>
+                </li>
+                <li>
+                    <def>AnimalJuvenile</def>
+                    <minAge>0.1</minAge>
+                </li>
+                <li>
+                    <def>AnimalAdult</def>
+                    <minAge>0.2222</minAge>
+                </li>
+            </lifeStageAges>
+            <headPosPerRotation>
+                <li>(0.0, 0, 0.37)</li>
+                <li>(0.23, 0, 0.27)</li>
+                <li>(0.0, 0, 0.27)</li>
+                <li>(-0.23, 0, 0.27)</li>
+            </headPosPerRotation>
+        </race>
+        <comps>
+            <li Class="CompProperties_EggLayer">
+                <eggFertilizedDef>MSSRAG_EggMuninnFertilized</eggFertilizedDef>
+                <eggFertilizationCountMax>1</eggFertilizationCountMax>
+                <eggLayIntervalDays>3.33</eggLayIntervalDays>
+                <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+                <eggCountRange>1</eggCountRange>
+            </li>
+        </comps>
+        <tools>
+            <li>
+                <label>claws</label>
+                <capacities>
+                    <li>Scratch</li>
+                </capacities>
+                <power>11</power>
+                <cooldownTime>1.5</cooldownTime>
+                <linkedBodyPartsGroup>Feet</linkedBodyPartsGroup>
+                <surpriseAttack>
+                    <extraMeleeDamages>
+                        <li>
+                            <def>Stun</def>
+                            <amount>14</amount>
+                        </li>
+                    </extraMeleeDamages>
+                </surpriseAttack>
+            </li>
+            <li>
+                <label>beak</label>
+                <capacities>
+                    <li>Bite</li>
+                </capacities>
+                <power>11</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
+                <surpriseAttack>
+                    <extraMeleeDamages>
+                        <li>
+                            <def>Stun</def>
+                            <amount>14</amount>
+                        </li>
+                    </extraMeleeDamages>
+                </surpriseAttack>
+            </li>
+            <li>
+                <label>head</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>6</power>
+                <cooldownTime>2</cooldownTime>
+                <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+                <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+                <chanceFactor>0.2</chanceFactor>
+            </li>
+        </tools>
+        <tradeTags>
+            <li>AnimalUncommon</li>
+        </tradeTags>
+    </ThingDef>
+
+    <ThingDef ParentName="EggFertBase">
+        <defName>MSSRAG_EggHuginnFertilized</defName>
+        <label>muninn egg (fert.)</label>
+        <description>A fertilized huginn egg. If all goes well, it should hatch into a baby huginn. It can be eaten raw, but it's much better cooked, if you want to anger the gods that is.</description>
+        <possessionCount>1</possessionCount>
+        <graphicData>
+            <color>(245,245,245)</color>
+            <drawSize>1.2</drawSize>
+        </graphicData>
+        <statBases>
+            <Nutrition>0.5</Nutrition>
+            <MarketValue>11.0</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Hatcher">
+                <hatcherDaystoHatch>7</hatcherDaystoHatch>
+                <hatcherPawn>MSSRAG_Huginn</hatcherPawn>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <PawnKindDef ParentName="BigBirdKindBase">
+        <defName>MSSRAG_Muninn</defName>
+        <label>Muninn</label>
+        <labelPlural>Muninn</labelPlural>
+        <race>MSSRAG_Muninn</race>
+        <combatPower>85</combatPower>
+        <lifeStages>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Animal/MSSRAG_Muninn/Muninn</texPath>
+                    <drawSize>1.1</drawSize>
+                    <color>(133,107,96)</color>
+                    <shaderType>CutoutComplex</shaderType>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Pawn/Animal/MSSRAG_Muninn/Dessicated_Muninn</texPath>
+                    <drawSize>1.1</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Animal/MSSRAG_Muninn/Muninn</texPath>
+                    <drawSize>1.4</drawSize>
+                    <color>(133,107,96)</color>
+                    <shaderType>CutoutComplex</shaderType>
+                    <shadowData>
+                        <volume>(0.3, 0.3, 0.3)</volume>
+                        <offset>(0,0,-0.3)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Pawn/Animal/MSSRAG_Muninn/Dessicated_Muninn</texPath>
+                    <drawSize>1.4</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+            <li>
+                <bodyGraphicData>
+                    <texPath>Things/Pawn/Animal/MSSRAG_Muninn/Muninn</texPath>
+                    <drawSize>1.8</drawSize>
+                    <color>(62,58,66)</color>
+                    <shaderType>CutoutComplex</shaderType>
+                    <shadowData>
+                        <volume>(0.4, 0.4, 0.4)</volume>
+                        <offset>(0,0,-0.2)</offset>
+                    </shadowData>
+                </bodyGraphicData>
+                <femaleGraphicData>
+                    <texPath>Things/Pawn/Animal/MSSRAG_Muninn/Muninn</texPath>
+                    <drawSize>1.8</drawSize>
+                    <color>(133,107,96)</color>
+                    <shaderType>CutoutComplex</shaderType>
+                    <shadowData>
+                        <volume>(0.4, 0.4, 0.4)</volume>
+                        <offset>(0,0,-0.2)</offset>
+                    </shadowData>
+                </femaleGraphicData>
+                <dessicatedBodyGraphicData>
+                    <texPath>Things/Pawn/Animal/MSSRAG_Muninn/Dessicated_Muninn</texPath>
+                    <drawSize>1.8</drawSize>
+                </dessicatedBodyGraphicData>
+            </li>
+        </lifeStages>
+    </PawnKindDef>
+
+    <ThingDef ParentName="EggFertBase">
+        <defName>MSSRAG_EggMuninnFertilized</defName>
+        <label>muninn egg (fert.)</label>
+        <description>A fertilized muninn egg. If all goes well, it should hatch into a baby muninn. It can be eaten raw, but it's much better cooked, if you want to anger the gods that is.</description>
+        <possessionCount>1</possessionCount>
+        <graphicData>
+            <color>(245,245,245)</color>
+            <drawSize>1.2</drawSize>
+        </graphicData>
+        <statBases>
+            <Nutrition>0.5</Nutrition>
+            <MarketValue>11.0</MarketValue>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Hatcher">
+                <hatcherDaystoHatch>6.5</hatcherDaystoHatch>
+                <hatcherPawn>MSSRAG_Muninn</hatcherPawn>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>
