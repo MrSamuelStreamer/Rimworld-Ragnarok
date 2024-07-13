@@ -18,23 +18,25 @@
             <li>Medieval Overhaul</li>
         </mods>
         <match Class="PatchOperationSequence">
-            <li Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/thingClass</xpath>
-                <value>
-                    <thingClass>MedievalOverhaul.Plant_SecondaryDrop</thingClass>
-                </value>
-            </li>
-            <li Class="PatchOperationAddModExtension">
-                <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/modExtensions</xpath>
-                <value>
-                    <li Class="MedievalOverhaul.SecondaryPlantDropExtension">
-                        <secondaryDrop>MSSRAG_AnimaSap</secondaryDrop>
-                        <secondaryDropAmountRange>20</secondaryDropAmountRange>
-                        <secondaryDropChance>1</secondaryDropChance>
-                        <secondaryNotWhenLeafless>false</secondaryNotWhenLeafless>
-                    </li>
-                </value>
-            </li>
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/thingClass</xpath>
+                    <value>
+                        <thingClass>MedievalOverhaul.Plant_SecondaryDrop</thingClass>
+                    </value>
+                </li>
+                <li Class="PatchOperationAddModExtension">
+                    <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/modExtensions</xpath>
+                    <value>
+                        <li Class="MedievalOverhaul.SecondaryPlantDropExtension">
+                            <secondaryDrop>MSSRAG_AnimaSap</secondaryDrop>
+                            <secondaryDropAmountRange>20</secondaryDropAmountRange>
+                            <secondaryDropChance>1</secondaryDropChance>
+                            <secondaryNotWhenLeafless>false</secondaryNotWhenLeafless>
+                        </li>
+                    </value>
+                </li>
+            </operations>
         </match>
     </Operation>
 </Patch>
