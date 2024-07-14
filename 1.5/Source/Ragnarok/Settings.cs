@@ -5,15 +5,16 @@ namespace Ragnarok;
 
 public class Settings : ModSettings
 {
-    //Use Mod.settings.setting to refer to this setting.
     public bool removeSun = true;
+    public bool removePawnRewards = true;
 
     public void DoWindowContents(Rect wrect)
     {
-        Listing_Standard options = new Listing_Standard();
+        Listing_Standard options = new();
         options.Begin(wrect);
         
-        options.CheckboxLabeled("Ragnarok_Settings_SettingName".Translate(), ref removeSun);
+        options.CheckboxLabeled("MSSRAG_Settings_RemoveSun".Translate(), ref removeSun);
+        options.CheckboxLabeled("MSSRAG_Settings_RemovePawnRewards".Translate(), ref removePawnRewards);
         options.Gap();
 
         options.End();
@@ -22,5 +23,6 @@ public class Settings : ModSettings
     public override void ExposeData()
     {
         Scribe_Values.Look(ref removeSun, "removeSun", true);
+        Scribe_Values.Look(ref removePawnRewards, "removePawnRewards", true);
     }
 }
