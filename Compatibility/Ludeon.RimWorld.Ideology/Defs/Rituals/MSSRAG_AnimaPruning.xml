@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <PreceptDef>
+        <defName>MSSRAG_AnimaTreePruning</defName>
+        <label>anima tree pruning</label>
+        <description>One person will prune an anima tree. The pruner will beseech the anima tree for its blessings. Others gather in a circle to watch and add devotion to the ritual.</description>
+        <issue>Ritual</issue>
+        <preceptClass>Precept_Ritual</preceptClass>
+        <visible>true</visible>
+        <classic>true</classic>
+        <countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+        <selectionWeight>1.0</selectionWeight>
+        <ritualPatternBase>MSSRAG_AnimaTreePruningRitualPattern</ritualPatternBase>
+        <iconPath>UI/Icons/Rituals/AnimaTreeLinking</iconPath>
+        <usesIdeoVisualEffects>true</usesIdeoVisualEffects>
+        <mergeRitualGizmosFromAllIdeos>true</mergeRitualGizmosFromAllIdeos>
+        <useRepeatPenalty>true</useRepeatPenalty>
+        <showRitualFloatMenuOption>true</showRitualFloatMenuOption>
+    </PreceptDef>
+
+    <RitualObligationTargetFilterDef>
+        <defName>MSSRAG_AnimaTreeRitualObligationTargetFilter</defName>
+        <workerClass>RitualObligationTargetWorker_ThingDef</workerClass>
+        <thingDefs>
+            <li>Plant_TreeAnima</li>
+        </thingDefs>
+        <colonistThingsOnly>false</colonistThingsOnly>
+    </RitualObligationTargetFilterDef>
+
+    <RitualPatternDef>
+        <defName>MSSRAG_AnimaTreePruningRitualPattern</defName>
+        <ritualOnlyForIdeoMembers>false</ritualOnlyForIdeoMembers>
+        <ritualBehavior>MSSRAG_AnimaTreePruningBehavior</ritualBehavior>
+        <ritualTargetFilter>SelectedThing</ritualTargetFilter>
+        <ritualObligationTargetFilter>MSSRAG_AnimaTreeRitualObligationTargetFilter</ritualObligationTargetFilter>
+        <ritualOutcomeEffect>MSSRAG_AnimaTreePruningEffect</ritualOutcomeEffect>
+        <playsIdeoMusic>false</playsIdeoMusic>
+        <alwaysStartAnytime>true</alwaysStartAnytime>
+        <ritualFreeStartIntervalDaysRange>1~5</ritualFreeStartIntervalDaysRange>
+    </RitualPatternDef>
+
+    <RitualBehaviorDef>
+        <defName>MSSRAG_AnimaTreePruningBehavior</defName>
+        <durationTicks>10000</durationTicks>
+        <workerClass>RitualBehaviorWorker</workerClass>
+        <roles>
+            <li Class="RitualRoleColonist">
+                <label>pruner</label>
+                <id>organizer</id>
+                <required>true</required>
+                <maxCount>1</maxCount>
+                <defaultForSelectedColonist>true</defaultForSelectedColonist>
+                <substitutable>true</substitutable>
+                <noCandidatesGizmoDesc>Need a colonist assigned to plant cutting.</noCandidatesGizmoDesc>
+                <allowChild>false</allowChild>
+                <customChildDisallowMessage>Only adults can prune an anima tree safely.</customChildDisallowMessage>
+            </li>
+        </roles>
+        <spectatorsLabel>Viewers</spectatorsLabel>
+        <spectatorGerund>view</spectatorGerund>
+        <stages>
+            <li Class="RitualStage_AnimaTreeLinking">
+                <defaultDuty>LinkWithAnimaTreeSecondary</defaultDuty>
+                <endTriggers>
+                    <li Class="StageEndTrigger_DurationPercentage">
+                        <percentage>1</percentage>
+                    </li>
+                </endTriggers>
+                <spectateDistanceOverride>3~4</spectateDistanceOverride>
+                <roleBehaviors>
+                    <li>
+                        <roleId>organizer</roleId>
+                        <dutyDef>SpeakOnCell</dutyDef>
+                        <jobReportOverride>beseeching the tree</jobReportOverride>
+                        <customPositions>
+                            <li Class="RitualPosition_AnimaLinkingSpot" />
+                        </customPositions>
+                    </li>
+                </roleBehaviors>
+            </li>
+        </stages>
+    </RitualBehaviorDef>
+
+    <RitualOutcomeEffectDef>
+        <defName>MSSRAG_AnimaTreePruningEffect</defName>
+        <workerClass>Ragnarok.RitualOutcomeEffectWorker_PruneTree</workerClass>
+        <warnOnLowQuality>false</warnOnLowQuality>
+        <givesDevelopmentPoints>false</givesDevelopmentPoints>
+        <comps>
+            <li Class="Ragnarok.RitualOutcomeComp_SpawnItem">
+                <label>extra windfall</label>
+                <labelAbstract>extra windfall</labelAbstract>
+                <itemDef>MSSRAG_AnimaLog</itemDef>
+                <curve>
+                    <points>
+                        <li>(0, 0.0)</li>
+                        <li>(0.15, 0)</li>
+                        <li>(0.20, 10)</li>
+                        <li>(0.80, 18)</li>
+                        <li>(1.0, 40)</li>
+                    </points>
+                </curve>
+            </li>
+            <li Class="RitualOutcomeComp_PawnSkill">
+                <label>{PAWN_labelShort}'s plants skill</label>
+                <labelAbstract>pruner's plants skill</labelAbstract>
+                <roleId>organizer</roleId>
+                <skillDef>Plants</skillDef>
+                <curve>
+                    <points>
+                        <li>(0, 0.0)</li>
+                        <li>(20, 0.25)</li>
+                    </points>
+                </curve>
+            </li>
+            <li Class="RitualOutcomeComp_ParticipantCount">
+                <label>participant count</label>
+                <curve>
+                    <points>
+                        <li>(1, 0.2)</li>
+                        <li>(2, 0.4)</li>
+                        <li>(4, 0.6)</li>
+                        <li>(6, 0.8)</li>
+                        <li>(8, 1)</li>
+                    </points>
+                </curve>
+            </li>
+        </comps>
+        <extraPredictedOutcomeDescriptions>
+            <li>If the {0} is good the tree may grant its bounty.</li>
+            <li>If the {0} is disrespectful the tree may not survive the ritual.</li>
+        </extraPredictedOutcomeDescriptions>
+
+        <outcomeChances>
+            <li>
+                <label>Disrespectful</label>
+                <chance>0.05</chance>
+                <memory>MSSRAG_DisrespectfulTreePruning</memory>
+                <description>The {0} was terrible! The speech was stuttering and incoherent, and you could feel the tree wither in pain.</description>
+                <potentialExtraOutcomeDesc>There's a 30% chance that the tree will die.</potentialExtraOutcomeDesc>
+                <positivityIndex>-2</positivityIndex>
+            </li>
+            <li>
+                <label>Boring</label>
+                <chance>0.15</chance>
+                <memory>MSSRAG_BoringTreePruning</memory>
+                <description>The {0} was boring. The speech was repetitive and didn't respect the dignity of the tree.</description>
+                <positivityIndex>-1</positivityIndex>
+            </li>
+            <li>
+                <label>Respectful</label>
+                <chance>0.6</chance>
+                <memory>MSSRAG_RespectfulTreePruning</memory>
+                <description>The {0} was satisfying. The speech felt meaningful, and the tree seemed to glow a little brighter.</description>
+                <positivityIndex>1</positivityIndex>
+            </li>
+            <li>
+                <label>Spectacular</label>
+                <chance>0.2</chance>
+                <memory>MSSRAG_SpectacularTreePruning</memory>
+                <description>The {0} was spectacular! The speech brought everyone to a zen-like state as they truly connected with the tree like cleansing waters for the spirit.</description>
+                <positivityIndex>2</positivityIndex>
+            </li>
+        </outcomeChances>
+    </RitualOutcomeEffectDef>
+
+    <ThoughtDef>
+        <defName>MSSRAG_DisrespectfulTreePruning</defName>
+        <thoughtClass>Thought_AttendedRitual</thoughtClass>
+        <durationDays>6</durationDays>
+        <stackLimit>3</stackLimit>
+        <stages>
+            <li>
+                <label>disrespectful pruning</label>
+                <description>That ceremony was so disrespectful I could feel the negative energies poisoning the tree.</description>
+                <baseMoodEffect>-3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>MSSRAG_BoringTreePruning</defName>
+        <thoughtClass>Thought_AttendedRitual</thoughtClass>
+        <durationDays>6</durationDays>
+        <stackLimit>3</stackLimit>
+        <stages>
+            <li>
+                <label>boring pruning</label>
+                <description>That ceremony was so boring I could feel the negative energies poisoning the tree.</description>
+                <baseMoodEffect>-2</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>MSSRAG_RespectfulTreePruning</defName>
+        <thoughtClass>Thought_AttendedRitual</thoughtClass>
+        <durationDays>6</durationDays>
+        <stackLimit>3</stackLimit>
+        <stages>
+            <li>
+                <label>respectful pruning</label>
+                <description>That ceremony was so satisfying I could feel the positive energies nourishing the tree.</description>
+                <baseMoodEffect>2</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <ThoughtDef>
+        <defName>MSSRAG_SpectacularTreePruning</defName>
+        <thoughtClass>Thought_AttendedRitual</thoughtClass>
+        <durationDays>6</durationDays>
+        <stackLimit>3</stackLimit>
+        <stages>
+            <li>
+                <label>spectacular pruning</label>
+                <description>That ceremony was so spectacular I was swept away in the anima torrent flowing and pulsing like part of heartbeat of the world itself.</description>
+                <baseMoodEffect>3</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>
