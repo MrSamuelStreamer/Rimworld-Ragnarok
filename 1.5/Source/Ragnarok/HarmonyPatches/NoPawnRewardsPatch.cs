@@ -12,7 +12,7 @@ public static class NoPawnRewardsPatch
         [HarmonyPrefix]
         public static bool PrefixGenerateRewards(ref RewardsGeneratorParams parmsResolved)
         {
-            parmsResolved.thingRewardItemsOnly = true;
+            if (RagnarokMod.settings.removePawnRewards) parmsResolved.thingRewardItemsOnly = true;
             return true;
         }
     }
