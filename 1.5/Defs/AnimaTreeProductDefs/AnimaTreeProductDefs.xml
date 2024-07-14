@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <Ragnarok.Anima.AnimaTreeProductDef>
+        <defName>Steel</defName>
+        <label>steel</label>
+        <description>steel</description>
+        <Product>Steel</Product>
+        <ProduceCount>20</ProduceCount>
+        <CultivationWorkToProduce>2000</CultivationWorkToProduce>
+    </Ragnarok.Anima.AnimaTreeProductDef>
+    
+    <Ragnarok.Anima.AnimaTreeProductDef>
+        <defName>Wood</defName>
+        <label>Wood</label>
+        <description>Wood</description>
+        <Product>WoodLog</Product>
+        <ProduceCount>20</ProduceCount>
+        <CultivationWorkToProduce>2000</CultivationWorkToProduce>
+    </Ragnarok.Anima.AnimaTreeProductDef>
+    
+</Defs>

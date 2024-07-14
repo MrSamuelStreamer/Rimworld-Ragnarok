@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>MSSRAG_ChangeTreeMode</defName>
+    <driverClass>Ragnarok.Anima.JobDriver_ChangeTreeMode</driverClass>
+    <reportString>changing dryad caste of TargetA.</reportString>
+  </JobDef>
+
+  <JobDef>
+    <defName>MSSRAG_PruneGauranlenTree</defName>
+    <driverClass>Ragnarok.Anima.JobDriver_CultivateAnimaTree</driverClass>
+    <reportString>pruning TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+</Defs>
