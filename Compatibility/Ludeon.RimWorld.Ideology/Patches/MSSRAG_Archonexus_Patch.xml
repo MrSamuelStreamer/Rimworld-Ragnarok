@@ -17,8 +17,21 @@
     <Operation Class="PatchOperationAdd">
         <xpath>Defs/ThingDef[defName="ArchonexusCore"]/comps</xpath>
         <value>
+            <li Class="CompProperties_Spawner">
+                <requiresPower>false</requiresPower>
+                <thingToSpawn>MSSRAG_AnimaLog</thingToSpawn>
+                <spawnCount>5</spawnCount>
+                <spawnIntervalRange><min>600000</min><max>600000</max></spawnIntervalRange>
+                <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+                <showMessageIfOwned>true</showMessageIfOwned>
+              </li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="ArchonexusCore"]/comps</xpath>
+        <value>
             <li Class="CompProperties_Glower">
-                <overlightRadius>7.0</overlightRadius>
+                <overlightRadius>18.0</overlightRadius>
                 <glowRadius>26</glowRadius>
                 <glowColor>(370,370,370,0)</glowColor>
             </li>
@@ -66,7 +79,7 @@
         <xpath>Defs/ThingDef[defName="ArchotechTower"]/comps</xpath>
         <value>
             <li Class="CompProperties_Glower">
-                <overlightRadius>5.0</overlightRadius>
+                <overlightRadius>10.0</overlightRadius>
                 <glowRadius>13</glowRadius>
                 <glowColor>(370,370,370,0)</glowColor>
             </li>
@@ -81,6 +94,20 @@
                 <compClass>CompHeatPusherPowered</compClass>
                 <heatPerSecond>2</heatPerSecond>
             </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="ArchotechTower"]/comps</xpath>
+        <value>
+            <li Class="CompProperties_Spawner">
+                <requiresPower>false</requiresPower>
+                <thingToSpawn>MSSRAG_AnimaLog</thingToSpawn>
+                <spawnCount>5</spawnCount>
+                <spawnIntervalRange><min>600000</min><max>600000</max></spawnIntervalRange>
+                <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+                <showMessageIfOwned>true</showMessageIfOwned>
+              </li>
         </value>
     </Operation>
 
