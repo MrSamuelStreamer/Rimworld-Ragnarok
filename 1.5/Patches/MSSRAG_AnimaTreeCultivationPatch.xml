@@ -5,7 +5,7 @@
         <xpath>/Defs/ThingDef[defName='Plant_TreeAnima']/comps</xpath>
         <value>
             <li Class="Ragnarok.Anima.CompProperies_AnimaTreeCultivationConnection">
-                <DefaultProduce>Steel</DefaultProduce>
+                <SpawnItemEffector>GauranlenLeavesBatch</SpawnItemEffector>
             </li>
         </value>
     </Operation>

@@ -1,4 +1,4 @@
-﻿using RimWorld;
+﻿using System.Collections.Generic;
 using Verse;
 
 namespace Ragnarok.Anima;
@@ -8,19 +8,9 @@ public class AnimaTreeProductDef : Def
     public ThingDef Product;
     public int ProduceCount;
     public int CultivationWorkToProduce;
-    private string cachedDescription;
-    
-    
-    public string Description
-    {
-        get
-        {
-            if (cachedDescription != null) return cachedDescription;
-            cachedDescription = description;
+    public List<ResearchProjectDef> ResearchPrerequisites;
+    public bool KeepProducing = false;
 
-            if (Product != null && !Product.description.NullOrEmpty())
-                cachedDescription = Product.description;
-            return cachedDescription;
-        }
-    }
+    public new string label => Product?.label;
+    public new string description => Product?.description;
 }

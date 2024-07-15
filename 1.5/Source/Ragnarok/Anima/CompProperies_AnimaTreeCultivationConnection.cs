@@ -5,7 +5,7 @@ namespace Ragnarok.Anima;
 
 public class CompProperies_AnimaTreeCultivationConnection: CompProperties
 {
-    public AnimaTreeProductDef DefaultProduce;
+    public EffecterDef SpawnItemEffector;
     
     public CompProperies_AnimaTreeCultivationConnection() => this.compClass = typeof (CompAnimaTreeCultivationConnection);
     

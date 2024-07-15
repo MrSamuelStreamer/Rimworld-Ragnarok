@@ -7,4 +7,6 @@
     <MSSRAG_AnimaProduceFloatMenu>Anima tree cultivation product</MSSRAG_AnimaProduceFloatMenu>
     <MSSRAG_ChangeAnimaProduct>Change cultivation product</MSSRAG_ChangeAnimaProduct>
     <MSSRAG_ChangeAnimaProductDesc>Choose something different cultivate</MSSRAG_ChangeAnimaProductDesc>
+    <MSSRAG_NoProduce>Do not produce</MSSRAG_NoProduce>
+    <MSSRAG_NotResearched>(Not Researched) {0}</MSSRAG_NotResearched>
 </LanguageData>
