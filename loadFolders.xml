@@ -4,5 +4,6 @@
     <li>Common</li>
     <li>1.5</li>
     <li IfModActive="Ludeon.RimWorld.Ideology">Compatibility/Ludeon.RimWorld.Ideology</li>
+    <li IfModActive="levefun.therealflamberg">Compatibility/levefun.therealflamberg</li>
   </v1.5>
 </loadFolders>
