@@ -32,6 +32,10 @@
       <HintPath>../../../../../RimWorldWin64_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
       <HintPath>../../../../../RimWorldWin64_Data/Managed/UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>False</Private>
@@ -64,6 +68,18 @@
     <CompatibilityFiles Include="../../../Compatibility/**" />
     
     <ExtraFiles Include="../../../LoadFolders.xml;../../../LICENSE;../../../README.md" />
+    
+    <ReleaseFiles Update="..\..\Defs\JobDefs\Jobs_Work.xml">
+      <Link>Rimworld-Ragnarok\1.5\Defs\JobDefs\Jobs_Work.xml</Link>
+    </ReleaseFiles>
+    
+    <ReleaseFiles Update="..\..\Patches\MSSRAG_AnimaTreeCultivationPatch.xml">
+      <Link>Rimworld-Ragnarok\1.5\Patches\MSSRAG_AnimaTreeCultivationPatch.xml</Link>
+    </ReleaseFiles>
+    
+    <ReleaseFiles Update="..\..\Defs\AnimaTreeProductDefs\AnimaTreeProductDefs.xml">
+      <Link>Rimworld-Ragnarok\1.5\Defs\AnimaTreeProductDefs\AnimaTreeProductDefs.xml</Link>
+    </ReleaseFiles>
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
     <RemoveDir Condition="Exists('../../../Release')" Directories="../../../Release" />

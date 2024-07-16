@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Bioferrite content -->
+
+    <ResearchProjectDef>
+        <defName>MSSRAG_LimbCultivation</defName>
+        <label>limb cultivation</label>
+        <description>Cultivate anima limbs and implants, as well as other resources from anima trees.</description>
+        <baseCost>4000</baseCost>
+        <techLevel>Neolithic</techLevel>
+        <prerequisites>
+            <li MayRequire="Seti.Victor.AnimaBodies">AnimaImplants</li>
+        </prerequisites>
+        <researchViewX>3.00</researchViewX>
+        <researchViewY>0.70</researchViewY>
+    </ResearchProjectDef>
+
+</Defs>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName='Plant_TreeAnima']/comps</xpath>
+        <value>
+            <li Class="Ragnarok.Anima.CompProperies_AnimaTreeCultivationConnection">
+                <SpawnItemEffector>GauranlenLeavesBatch</SpawnItemEffector>
+            </li>
+        </value>
+    </Operation>
+</Patch>
