@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationAdd"> 
+	<success>Always</success>
+		<xpath>/Defs/ThingDef[defName="MeleeWeapon_TheRealFLAMBERGEBladelink"]</xpath>
+		<value>
+			<relicChance>1</relicChance>
+		</value>
+	</Operation>
+</Patch>
