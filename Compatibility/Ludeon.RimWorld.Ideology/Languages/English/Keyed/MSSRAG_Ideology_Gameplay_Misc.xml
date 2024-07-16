@@ -3,4 +3,6 @@
 <LanguageData>
     <MSSRAG_PruneTreeSuccess>After carefully beseeching the tree, several small branches have fallen. There is a sense of appreciation and reward in the air.</MSSRAG_PruneTreeSuccess>
     <MSSRAG_PruneTreeFail>The ritual went catastrophically wrong and the tree was destroyed</MSSRAG_PruneTreeFail>
+    <MSSRAG_LetterLabel_Incident_DarknessSeepsIn>Darkness seeps in</MSSRAG_LetterLabel_Incident_DarknessSeepsIn>
+    <MSSRAG_Letter_Incident_DarknessSeepsIn>The tendrils of darkness seep in ever closer, grasping and clawing for the light. The darkness seems to thicken for a moment, as if trying to snuff the hated illumination\n\nA {0} has been extinguished.</MSSRAG_Letter_Incident_DarknessSeepsIn>
 </LanguageData>

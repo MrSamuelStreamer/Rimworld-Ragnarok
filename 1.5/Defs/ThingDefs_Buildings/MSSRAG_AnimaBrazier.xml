@@ -22,13 +22,15 @@
       <WorkToBuild>5000</WorkToBuild>
       <Mass>25</Mass>
     </statBases>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <passability>PassThroughOnly</passability>
     <canOverlapZones>false</canOverlapZones>
     <castEdgeShadows>true</castEdgeShadows>
     <comps>
       <li Class="CompProperties_FireOverlay">
-        <fireSize>1.0</fireSize>
+        <fireSize>3.0</fireSize>
         <offset>(0,0,0.5)</offset>
       </li>
       <li Class="CompProperties_Flickable" />
@@ -57,7 +59,7 @@
 	    <li Class="CompProperties_MeditationFocus">
         <statDef>MeditationFocusStrength</statDef>
         <focusTypes>
-          <li>Natural</li>d
+          <li>Natural</li>
           <li>Flame</li>
         </focusTypes>
         <offsets>

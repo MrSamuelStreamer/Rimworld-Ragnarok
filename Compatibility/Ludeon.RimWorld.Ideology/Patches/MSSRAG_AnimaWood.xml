@@ -10,15 +10,20 @@
             <dieIfLeafless>False</dieIfLeafless>
             <harvestTag>Standard</harvestTag>
             <harvestYield>1</harvestYield>
-			<sowMinSkill>3</sowMinSkill>
-			<mustBeWildToSow>false</mustBeWildToSow>
+            <mustBeWildToSow>false</mustBeWildToSow>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/plant/sowMinSkill</xpath>
+        <value>
+            <sowMinSkill>3</sowMinSkill>
         </value>
     </Operation>
     <Operation Class="PatchOperationRemove">
         <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/comps/li[@Class = "CompProperties_Glower"]</xpath>
     </Operation>
 
-<!-- Sap if Medieval Overhaul is active -->
+    <!-- Sap if Medieval Overhaul is active -->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>Medieval Overhaul</li>
