@@ -53,8 +53,8 @@
       </li>
       <li Class="CompProperties_HeatPusher">
         <compClass>CompHeatPusherPowered</compClass>
-        <heatPerSecond>3.5</heatPerSecond>
-        <heatPushMaxTemperature>23</heatPushMaxTemperature>
+        <heatPerSecond>28</heatPerSecond>
+        <heatPushMaxTemperature>35</heatPushMaxTemperature>
       </li>
 	    <li Class="CompProperties_MeditationFocus">
         <statDef>MeditationFocusStrength</statDef>
