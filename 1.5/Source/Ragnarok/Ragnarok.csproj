@@ -80,6 +80,10 @@
     <ReleaseFiles Update="..\..\Defs\AnimaTreeProductDefs\AnimaTreeProductDefs.xml">
       <Link>Rimworld-Ragnarok\1.5\Defs\AnimaTreeProductDefs\AnimaTreeProductDefs.xml</Link>
     </ReleaseFiles>
+    
+    <ReleaseFiles Update="..\..\Patches\MSSRAG_ExampleExtraButcherProducts.xml">
+      <Link>Rimworld-Ragnarok\1.5\Patches\MSSRAG_ExampleExtraButcherProducts.xml</Link>
+    </ReleaseFiles>
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
     <RemoveDir Condition="Exists('../../../Release')" Directories="../../../Release" />
