@@ -82,7 +82,7 @@
     </ReleaseFiles>
     
     <ReleaseFiles Update="..\..\Patches\MSSRAG_ExampleExtraButcherProducts.xml">
-      <Link>Rimworld-Ragnarok\1.5\Patches\MSSRAG_ExampleExtraButcherProducts</Link>
+      <Link>Rimworld-Ragnarok\1.5\Patches\MSSRAG_ExampleExtraButcherProducts.xml</Link>
     </ReleaseFiles>
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
