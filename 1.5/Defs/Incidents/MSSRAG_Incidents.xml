@@ -10,7 +10,7 @@
             <li>Map_PlayerHome</li>
         </targetTags>
         <workerClass>Ragnarok.IncidentWorker_DarknessSeepsIn</workerClass>
-        <baseChance>8</baseChance>
+        <baseChance>4</baseChance>
         <minRefireDays>1</minRefireDays>
         <pointsScaleable>false</pointsScaleable>
     </IncidentDef>
