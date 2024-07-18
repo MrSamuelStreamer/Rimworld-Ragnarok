@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugBase">
     <defName>MSSRAG_AnimaMead</defName>
     <label>Anima Mead</label>
-    <description>A slightly halucinogenic alcoholic beverage distilled from the sweet sap of anima trees. </description>
+    <description>A slightly halucinogenic alcoholic beverage distilled from the sweet sap of anima trees.</description>
     <descriptionHyperlinks>
       <HediffDef>PsychiteTeaHigh</HediffDef>
       <HediffDef>PsychiteTolerance</HediffDef>

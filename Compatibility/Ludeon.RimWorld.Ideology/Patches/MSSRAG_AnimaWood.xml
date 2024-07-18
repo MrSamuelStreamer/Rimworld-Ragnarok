@@ -10,6 +10,7 @@
             <dieIfLeafless>False</dieIfLeafless>
             <harvestTag>Standard</harvestTag>
             <harvestYield>1</harvestYield>
+            <forceIsTree>True</forceIsTree>
             <mustBeWildToSow>false</mustBeWildToSow>
         </value>
     </Operation>
