@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <GauranlenTreeModeDef>
+    <defName>MSSRAG_AnimaDryad</defName>
+    <label>Anima Dryad</label>
+    <description>A hybrid dryad of Gauranlen and Anima origin. It occasionally sheds several anima branches that can be used for crafting, and is considered a safer method of anima cultivation than highly reactive anima trees.</description>
+    <pawnKindDef>MSSRAG_AnimaDryad</pawnKindDef>
+    <drawPosition>(0.833, 0.833)</drawPosition>
+    <displayedStats>
+      <li>MaxHitPoints</li>
+      <li>MoveSpeed</li>
+      <li>CarryingCapacity</li>
+    </displayedStats>
+    <hyperlinks>
+      <ThingDef>MSSRAG_AnimaDryad</ThingDef>
+    </hyperlinks>
+  </GauranlenTreeModeDef>
+</Defs>

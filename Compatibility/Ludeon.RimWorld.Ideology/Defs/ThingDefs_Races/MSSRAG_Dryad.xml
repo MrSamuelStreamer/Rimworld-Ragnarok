@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Anima Log Spawning Gauranlen -->
+
+  <ThingDef ParentName="DryadBase">
+    <defName>MSSRAG_AnimaDryad</defName>
+    <label>Anima Tree Dryad</label>
+    <description>A hybrid dryad of Gauranlen and Anima origin. It occasionally sheds several anima branches that can be used for crafting, and is considered a safer method of anima cultivation than highly reactive anima trees. However, it is slow and ineffective at work or combat.\n\nIn general, dryads are mammal-like creatures that have a symbiotic relationship with the Gauranlen tree. They reproduce together with their tree, which contains a hidden dryad queen. Dryads can morph into various specialized castes.</description>
+    <statBases>
+      <MoveSpeed>3</MoveSpeed>
+    </statBases>
+    <uiIconScale>1.25</uiIconScale>
+    <descriptionHyperlinks>
+      <ThingDef>MSSRAG_AnimaLog</ThingDef>
+    </descriptionHyperlinks>
+    <race>
+      <useMeatFrom>Dryad_Basic</useMeatFrom>
+      <lifeStageAges>
+        <li>
+          <def>AnimalAdult</def>
+          <soundWounded>Pawn_Dryad_Woodmaker_Wounded</soundWounded>
+          <soundCall>Pawn_Dryad_Woodmaker_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <headPosPerRotation>
+        <li>(0.0, 0, 0.18)</li>
+        <li>(0.22, 0, 0.08)</li>
+        <li>(0, 0, 0.05)</li>
+        <li>(-0.22, 0, 0.08)</li>
+      </headPosPerRotation>
+    </race>
+    <comps>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>MSSRAG_AnimaLog</thingToSpawn>
+        <spawnCount>8</spawnCount>
+        <spawnIntervalRange>120000</spawnIntervalRange>
+        <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+        <showMessageIfOwned>true</showMessageIfOwned>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <PawnKindDef ParentName="DryadKindBase">
+    <defName>MSSRAG_AnimaDryad</defName>
+    <label>Anima Dryad</label>
+    <race>MSSRAG_AnimaDryad</race>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/MSSRAG_AnimaDryad/MSSRAG_AnimaDryad</texPath>
+          <drawSize>1.5</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Dryad_Woodmaker/Dessicated_DryadWoodmaker</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>
