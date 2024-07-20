@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <SurgeryOutcomeEffectDef ParentName="SurgeryOutcomeBase">
-        <defName>MSSRAG_TattooVeryMinot</defName>
+        <defName>MSSRAG_TattooVeryMinor</defName>
         <outcomes Inherit="False">
             <li Class="SurgeryOutcomeSuccess" />
             <li Class="SurgeryOutcome_Failure">
@@ -57,7 +57,7 @@
             <Artistic>5</Artistic>
         </skillRequirements>
         
-        <surgeryOutcomeEffect>MSSRAG_TattooVeryMinot</surgeryOutcomeEffect>
+        <surgeryOutcomeEffect>MSSRAG_TattooVeryMinor</surgeryOutcomeEffect>
         
         <researchPrerequisite>MSSRAG_Tattoos</researchPrerequisite>
         
@@ -128,7 +128,7 @@
             <Artistic>5</Artistic>
         </skillRequirements>
         
-        <surgeryOutcomeEffect>MSSRAG_TattooVeryMinot</surgeryOutcomeEffect>
+        <surgeryOutcomeEffect>MSSRAG_TattooVeryMinor</surgeryOutcomeEffect>
         
         <researchPrerequisite>MSSRAG_Tattoos</researchPrerequisite>
         
@@ -201,7 +201,7 @@
             <Artistic>5</Artistic>
         </skillRequirements>
         
-        <surgeryOutcomeEffect>MSSRAG_TattooVeryMinot</surgeryOutcomeEffect>
+        <surgeryOutcomeEffect>MSSRAG_TattooVeryMinor</surgeryOutcomeEffect>
         
         <researchPrerequisite>MSSRAG_Tattoos</researchPrerequisite>
 
@@ -271,7 +271,7 @@
             <Artistic>5</Artistic>
         </skillRequirements>
         
-        <surgeryOutcomeEffect>MSSRAG_TattooVeryMinot</surgeryOutcomeEffect>
+        <surgeryOutcomeEffect>MSSRAG_TattooVeryMinor</surgeryOutcomeEffect>
         
         <researchPrerequisite>MSSRAG_Tattoos</researchPrerequisite>
 
