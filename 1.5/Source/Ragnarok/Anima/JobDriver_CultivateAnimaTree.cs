@@ -18,7 +18,7 @@ public class JobDriver_CultivateAnimaTree : JobDriver
         return pawn.Reserve(job.targetA, job, errorOnFailed: errorOnFailed);
     }
 
-    protected override IEnumerable<Toil> MakeNewToils()
+    public override IEnumerable<Toil> MakeNewToils()
     {
         AddFinishAction(delegate
         {

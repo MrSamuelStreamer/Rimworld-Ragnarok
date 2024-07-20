@@ -54,6 +54,18 @@
     <PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime"/>
   </ItemGroup>
   
+  <ItemGroup>
+    <PackageReference Include="Krafs.Publicizer" Version="2.2.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Publicize Include="Assembly-CSharp"/>
+    <Publicize Include="RimWorld"/>
+  </ItemGroup>
+  
   <ItemGroup Condition="'@(Reference->WithMetadataValue('Identity', 'Assembly-CSharp')->Metadata('HintPath')->Exists())' == ''">
     <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5-*"/>
   </ItemGroup>
@@ -83,6 +95,10 @@
     
     <ReleaseFiles Update="..\..\Patches\MSSRAG_ExampleExtraButcherProducts.xml">
       <Link>Rimworld-Ragnarok\1.5\Patches\MSSRAG_ExampleExtraButcherProducts.xml</Link>
+    </ReleaseFiles>
+    
+    <ReleaseFiles Update="..\..\Defs\HediffDefs\MSSRAG_Hediffs_Tattoos.xml">
+      <Link>Rimworld-Ragnarok\1.5\Defs\HediffDefs\MSSRAG_Hediffs_Tattoos.xml</Link>
     </ReleaseFiles>
   </ItemGroup>
   <Target Name="PostBuild" AfterTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
