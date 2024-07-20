@@ -18,6 +18,12 @@
             <packageId>ludeon.rimworld.anomaly</packageId>
             <displayName>Anomaly</displayName>
         </li>
+        <li>
+            <packageId>smartkar.athenaframework</packageId>
+            <displayName>Athena Framework</displayName>
+            <steamWorkshopUrl>steam://url/CommunityFilePage/2903359518</steamWorkshopUrl>
+            <downloadUrl>https://github.com/SmArtKar/AthenaFramework</downloadUrl>
+        </li>
     </modDependencies>
     <loadAfter>
         <li>Ludeon.RimWorld.Anomaly</li>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/HediffDef[defName="MindDryad"]/comps</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/HediffDef[defName="MindDryad"]</xpath>
+            <value>
+                <comps />
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/HediffDef[defName="MindDryad"]/comps</xpath>
+        <value>
+            <li Class="AthenaFramework.HediffCompProperties_Renderable">
+                <additionalGraphics>
+                    <li Class="AthenaFramework.HediffGraphicPackage">
+                        <graphicData>
+                            <texPath>Things/Pawn/Animal/Dryad_Basic/Dryad_Basic</texPath>
+                            <graphicClass>Graphic_Multi</graphicClass>
+                            <drawSize>1.3</drawSize>
+                            <shaderType>MoteGlowDistorted</shaderType>
+                            <shaderParameters>
+                                <_DistortionTex>/Other/Ripples</_DistortionTex>
+                                <_distortionIntensity>0.05</_distortionIntensity>
+                                <_DistortionScale>0.4</_DistortionScale>
+                                <_distortionScrollSpeed>(0.2, 0.2, 0.2)</_distortionScrollSpeed>
+                            </shaderParameters>
+                        </graphicData>
+                        <offsets>
+                            <li>(0.3, 1.6, -0.55)</li>
+                            <li>(-0.5, 1.1, -0.35)</li>
+                            <li>(0.3, -1.6, 0.65)</li>
+                            <li>(0.5, 1.1, -0.35)</li>
+                        </offsets>
+                        <onlyRenderWhenDrafted>true</onlyRenderWhenDrafted>
+                    </li>
+                </additionalGraphics>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>
