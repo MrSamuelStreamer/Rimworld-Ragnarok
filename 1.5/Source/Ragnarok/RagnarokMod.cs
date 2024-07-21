@@ -65,6 +65,6 @@ public class RagnarokMod : Mod
 
     public override string SettingsCategory()
     {
-        return "Ragnarok_SettingsCategory".Translate();
+        return "MSSRAG_SettingsCategory".Translate();
     }
 }
