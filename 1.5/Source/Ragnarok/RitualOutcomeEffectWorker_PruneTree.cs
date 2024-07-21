@@ -30,7 +30,7 @@ public class RitualOutcomeEffectWorker_PruneTree : RitualOutcomeEffectWorker_Fro
     public bool IsWorstNegativeOutcome(LordJob_Ritual ritual, RitualOutcomePossibility outcome) =>
         ritual.Ritual.outcomeEffect.def.outcomeChances.All(outcomeChance => outcomeChance.positivityIndex >= outcome.positivityIndex);
 
-    public override void ApplyExtraOutcome(
+    protected override void ApplyExtraOutcome(
         Dictionary<Pawn, int> totalPresence,
         LordJob_Ritual jobRitual,
         RitualOutcomePossibility outcome,

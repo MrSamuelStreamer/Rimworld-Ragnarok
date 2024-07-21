@@ -5,10 +5,10 @@ namespace Ragnarok;
 
 public class IncidentWorker_DarknessSeepsIn : IncidentWorker
 {
-    public override bool CanFireNowSub(IncidentParms parms) =>
+    protected override bool CanFireNowSub(IncidentParms parms) =>
         FindRandomLightSource((Map)parms.target) != null;
 
-    public override bool TryExecuteWorker(IncidentParms parms)
+    protected override bool TryExecuteWorker(IncidentParms parms)
     {
         Map map = (Map)parms.target;
         Thing lightSource = FindRandomLightSource(map);
