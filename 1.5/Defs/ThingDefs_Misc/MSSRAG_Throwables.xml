@@ -134,7 +134,6 @@
                 <hasStandardCommand>true</hasStandardCommand>
                 <range>12.9</range>
                 <violent>false</violent>
-                <forcedMissRadius>1.9</forcedMissRadius>
                 <warmupTime>1.5</warmupTime>
                 <noiseRadius>4</noiseRadius>
                 <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
