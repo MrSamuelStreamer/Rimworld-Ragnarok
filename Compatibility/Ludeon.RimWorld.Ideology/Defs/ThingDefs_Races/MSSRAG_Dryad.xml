@@ -33,7 +33,7 @@
     <comps>
       <li Class="CompProperties_Spawner">
         <thingToSpawn>MSSRAG_AnimaLog</thingToSpawn>
-        <spawnCount>8</spawnCount>
+        <spawnCount>16</spawnCount>
         <spawnIntervalRange>120000</spawnIntervalRange>
         <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
         <showMessageIfOwned>true</showMessageIfOwned>
