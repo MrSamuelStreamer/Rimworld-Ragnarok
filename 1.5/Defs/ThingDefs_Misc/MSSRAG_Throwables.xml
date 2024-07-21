@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+    <ThingDef ParentName="ApparelNoQualityBase">
+        <defName>MSSRAG_ThrowableTorchPack</defName>
+        <label>a pack of throwable torches</label>
+        <description>Lit torches you can throw that will provide a some light where it lands for a period of timme.</description>
+        <techLevel>Neolithic</techLevel>
+        <mergeVerbGizmos>false</mergeVerbGizmos>
+        <graphicData>
+            <texPath>Things/Building/Misc/TorchLamp</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.7,0.7)</drawSize>
+        </graphicData>
+        <comps>
+            <li Class="CompProperties_ApparelReloadable">
+                <soundReload>Standard_Reload</soundReload>
+                <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+                <maxCharges>6</maxCharges>
+                <ammoDef>WoodLog</ammoDef>
+                <ammoCountToRefill>100</ammoCountToRefill>
+                <chargeNoun>torch</chargeNoun>
+            </li>
+        </comps>
+        <verbs>
+            <li>
+                <verbClass>Verb_LaunchProjectileStaticPsychic</verbClass>
+                <label>throw torch</label>
+                <defaultProjectile>MSSRAG_TorchProjectile</defaultProjectile>
+                <warmupTime>1.5</warmupTime>
+                <range>14.0</range>
+                <burstShotCount>1</burstShotCount>
+                <onlyManualCast>true</onlyManualCast>
+                <hasStandardCommand>true</hasStandardCommand>
+                <targetable>true</targetable>
+                <violent>false</violent>
+                <targetParams>
+                    <canTargetPawns>false</canTargetPawns>
+                    <canTargetBuildings>false</canTargetBuildings>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <soundCast>FlareLaunch</soundCast>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+                <canGoWild>false</canGoWild>
+                <explosionRadiusRingColor>(0.8, 0.8, 0.4, 1)</explosionRadiusRingColor>
+            </li>
+        </verbs>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <recipeUsers>
+                <li>Campfire</li>
+            </recipeUsers>
+            <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+            <displayPriority>300</displayPriority>
+        </recipeMaker>
+        <costList>
+            <WoodLog>100</WoodLog>
+        </costList>
+        <tickerType>Normal</tickerType>
+        <statBases>
+            <Mass>1</Mass>
+            <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
+            <WorkToMake>100</WorkToMake>
+            <EquipDelay>2</EquipDelay>
+        </statBases>
+        <thingCategories>
+            <li>ApparelUtility</li>
+        </thingCategories>
+
+        <uiIconScale>1.3</uiIconScale>
+
+        <apparel>
+            <countsAsClothingForNudity>false</countsAsClothingForNudity>
+            <careIfWornByCorpse>false</careIfWornByCorpse>
+            <careIfDamaged>false</careIfDamaged>
+            <wearPerDay>0</wearPerDay>
+            <bodyPartGroups>
+                <li>Waist</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Belt</li>
+            </layers>
+        </apparel>
+        <allowedArchonexusCount>1</allowedArchonexusCount>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseMakeableGrenade">
+        <defName>MSSRAG_ThrowableTorch</defName>
+        <label>a throwable torch</label>
+        <description>A lit torch you can throw that will provide a some light where it lands for a period of timme.</description>
+        <techLevel>Neolithic</techLevel>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Things/Building/Misc/TorchLamp</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.7,0.7)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <statBases>
+            <Mass>1</Mass>
+            <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
+            <WorkToMake>100</WorkToMake>
+        </statBases>
+        <costList>
+            <WoodLog>20</WoodLog>
+        </costList>
+        <thingCategories>
+            <li>Items</li>
+        </thingCategories>
+        <weaponClasses>
+            <li>Neolithic</li>
+        </weaponClasses>
+
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <recipeUsers>
+                <li>Campfire</li>
+            </recipeUsers>
+            <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+            <displayPriority>300</displayPriority>
+        </recipeMaker>
+
+        <verbs>
+            <li>
+                <label>throw torch</label>
+                <verbClass>Verb_LaunchProjectileStaticOneUse</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <violent>false</violent>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>MSSRAG_TorchProjectile</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>MSSRAG_TorchProjectile</defName>
+        <label>torch</label>
+
+        <graphicData>
+            <texPath>Things/Building/Misc/TorchLamp</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+            <drawSize>(0.7,0.7)</drawSize>
+        </graphicData>
+
+        <thingClass>Projectile_SpawnsThing</thingClass>
+
+        <projectile>
+            <speed>40</speed>
+            <arcHeightFactor>1.0</arcHeightFactor>
+            <spinRate>3</spinRate>
+            <spawnsThingDef>TorchLamp</spawnsThingDef>
+            <damageDef>Flame</damageDef>
+        </projectile>
+    </ThingDef>
+</Defs>
