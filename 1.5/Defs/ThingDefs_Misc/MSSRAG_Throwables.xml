@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
 <Defs>
     <ThingDef ParentName="ApparelNoQualityBase">
-        <defName>MSSRAG_ThrowableTorch</defName>
+        <defName>MSSRAG_ThrowableTorchPack</defName>
         <label>a pack of throwable torches</label>
         <description>Lit torches you can throw that will provide a some light where it lands for a period of timme.</description>
         <techLevel>Neolithic</techLevel>
@@ -68,9 +69,9 @@
         <thingCategories>
             <li>ApparelUtility</li>
         </thingCategories>
-        
+
         <uiIconScale>1.3</uiIconScale>
-        
+
         <apparel>
             <countsAsClothingForNudity>false</countsAsClothingForNudity>
             <careIfWornByCorpse>false</careIfWornByCorpse>
@@ -84,7 +85,67 @@
             </layers>
         </apparel>
         <allowedArchonexusCount>1</allowedArchonexusCount>
-        
+    </ThingDef>
+
+    <ThingDef ParentName="BaseMakeableGrenade">
+        <defName>MSSRAG_ThrowableTorch</defName>
+        <label>a throwable torch</label>
+        <description>A lit torch you can throw that will provide a some light where it lands for a period of timme.</description>
+        <techLevel>Neolithic</techLevel>
+        <tickerType>Normal</tickerType>
+        <graphicData>
+            <texPath>Things/Building/Misc/TorchLamp</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.7,0.7)</drawSize>
+        </graphicData>
+        <uiIconScale>1.3</uiIconScale>
+        <soundInteract>Interact_Grenade</soundInteract>
+        <statBases>
+            <Mass>1</Mass>
+            <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
+            <WorkToMake>100</WorkToMake>
+        </statBases>
+        <costList>
+            <WoodLog>20</WoodLog>
+        </costList>
+        <thingCategories>
+            <li>Items</li>
+        </thingCategories>
+        <weaponClasses>
+            <li>Neolithic</li>
+        </weaponClasses>
+
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <recipeUsers>
+                <li>Campfire</li>
+            </recipeUsers>
+            <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+            <displayPriority>300</displayPriority>
+        </recipeMaker>
+
+        <verbs>
+            <li>
+                <label>throw torch</label>
+                <verbClass>Verb_LaunchProjectileStaticOneUse</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <range>12.9</range>
+                <violent>false</violent>
+                <forcedMissRadius>1.9</forcedMissRadius>
+                <warmupTime>1.5</warmupTime>
+                <noiseRadius>4</noiseRadius>
+                <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+                <soundCast>ThrowGrenade</soundCast>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+                <defaultProjectile>MSSRAG_TorchProjectile</defaultProjectile>
+                <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+            </li>
+        </verbs>
     </ThingDef>
 
     <ThingDef ParentName="BaseBullet">
