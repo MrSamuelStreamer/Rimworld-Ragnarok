@@ -18,7 +18,7 @@
     <ResearchProjectDef>
         <defName>MSSRAG_Tattoos</defName>
         <label>bioferrite tattoos</label>
-        <description>Use bioferrite to tattoo someone to infuse them with extra power.</description>
+        <description>Discover how to infuse ink with bioferrite in order to tattoo someone to imbue them with extra power.</description>
         <baseCost>2000</baseCost>
         <techLevel>Neolithic</techLevel>
     </ResearchProjectDef>

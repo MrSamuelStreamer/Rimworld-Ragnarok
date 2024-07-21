@@ -34,12 +34,16 @@ public class HediffComp_Tattoo: HediffComp
         if (Props.TattooType == TattooType.Body)
         {
             // bypass setter to override ideology
-            Pawn.style.bodyTattoo = newTattoo;
+            BodyTattooField.Value.SetValue(Pawn.style, newTattoo);
         }
         else
         {
             // bypass setter to override ideology
-            Pawn.style.faceTattoo = newTattoo;
+            FaceTattooField.Value.SetValue(Pawn.style, newTattoo);
         }
     }
+    
+    Lazy<FieldInfo> BodyTattooField = new(() => AccessTools.Field(typeof(Pawn_StyleTracker), "bodyTattoo"));
+    Lazy<FieldInfo> FaceTattooField = new(() => AccessTools.Field(typeof(Pawn_StyleTracker), "faceTattoo"));
+
 }

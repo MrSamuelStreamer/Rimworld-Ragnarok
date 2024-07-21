@@ -8,7 +8,7 @@
                 <failure>true</failure>
                 <totalDamage>5</totalDamage>
                 <applyEffectsToPart>true</applyEffectsToPart>
-                <letterLabel>Tattoo failed on {PATIENT_labelShort}</letterLabel>
+                <letterLabel>Failed to tattoo {PATIENT_labelShort}</letterLabel>
                 <letterText>{SURGEON_labelShort} has failed in a minor way while tattooing {PATIENT_labelShort} with a ({RECIPE_label}).</letterText>
             </li>
         </outcomes>
@@ -18,7 +18,7 @@
         <defName>MSSRAG_Voidsight</defName>
         <label>voidsight tattoo</label>
         <hediffClass>HediffWithComps</hediffClass>
-        <description>This person has a bioferrite tattoo that infused them with enhanced their perception of dark psychic phenomena. They will gain more knowledge when studying dark psychic phenomena and entities. Their psychic sensitivity is also increased.</description>
+        <description>This person has a bioferrite tattoo that has enhanced their perception of dark psychic phenomena. They will gain more knowledge when studying dark psychic phenomena and entities. Their psychic sensitivity is also increased.</description>
         <isBad>false</isBad>
         <comps>
             <li Class="HediffCompProperties_DisappearsOnDeath" />
@@ -99,7 +99,7 @@
         <stages>
             <li>
                 <statFactors>
-                    <IncomingDamageFactor>0.3</IncomingDamageFactor>
+                    <IncomingDamageFactor>0.8</IncomingDamageFactor>
                 </statFactors>
                 <damageFactors>
                     <Flame>2</Flame>
@@ -170,7 +170,7 @@
             <li>
                 <blocksMentalBreaks>true</blocksMentalBreaks>
                 <blocksInspirations>true</blocksInspirations>
-                <pctAllThoughtNullification>1</pctAllThoughtNullification>
+                <pctAllThoughtNullification>0.5</pctAllThoughtNullification>
                 <overrideMoodBase>0.7</overrideMoodBase>
                 <capMods>
                     <li>
