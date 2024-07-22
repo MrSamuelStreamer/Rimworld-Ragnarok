@@ -102,7 +102,7 @@
         <value>
             <li Class="CompProperties_Spawner">
                 <requiresPower>false</requiresPower>
-                <thingToSpawn>MSSRAG_AnimaLog</thingToSpawn>
+                <thingToSpawn>MSSRAG_AnimaSap</thingToSpawn>
                 <spawnCount>5</spawnCount>
                 <spawnIntervalRange><min>600000</min><max>600000</max></spawnIntervalRange>
                 <writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
