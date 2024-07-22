@@ -65,6 +65,26 @@
 
     <!-- Archotower -->
 
+    <!-- Adding ticker type so the spawner can tick -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="ArchotechTower"]/tickerType</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName="ArchotechTower"]</xpath>
+            <value>
+                <tickerType>Rare</tickerType>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationConditional">
+            <xpath>Defs/ThingDef[defName="ArchotechTower"]/tickerType[text()="Never" or text()="Long"]</xpath>
+            <match Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="ArchotechTower"]/tickerType</xpath>
+                <value>
+                    <tickerType>Rare</tickerType>
+                </value>
+            </match>
+        </match>
+    </Operation>
+
     <Operation Class="PatchOperationConditional">
         <xpath>Defs/ThingDef[defName="ArchotechTower"]/comps</xpath>
         <nomatch Class="PatchOperationAdd">

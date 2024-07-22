@@ -22,5 +22,6 @@
     <loadAfter>
         <li>Ludeon.RimWorld.Anomaly</li>
         <li>DankPyon.Medieval.Overhaul</li>
+        <li>BiomesTeam.BiomesCore</li>
     </loadAfter>
 </ModMetaData>

@@ -5,7 +5,7 @@
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/plant</xpath>
         <value>
-            <harvestedThingDef>MSSRAG_AnimaSap</harvestedThingDef>
+            <harvestedThingDef>MSSRAG_AnimaLog</harvestedThingDef>
             <harvestAfterGrowth>0.40</harvestAfterGrowth>
             <dieIfLeafless>False</dieIfLeafless>
             <harvestTag>Standard</harvestTag>
@@ -31,14 +31,23 @@
         </mods>
         <match Class="PatchOperationSequence">
             <operations>
-                <li Class="PatchOperationReplace">
+                <li Class="PatchOperationConditional">
                     <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/thingClass</xpath>
-                    <value>
-                        <thingClass>MedievalOverhaul.Plant_SecondaryDrop</thingClass>
-                    </value>
+                    <match Class="PatchOperationReplace">
+                        <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/thingClass</xpath>
+                        <value>
+                            <thingClass>MedievalOverhaul.Plant_SecondaryDrop</thingClass>
+                        </value>
+                    </match>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]</xpath>
+                        <value>
+                            <thingClass>MedievalOverhaul.Plant_SecondaryDrop</thingClass>
+                        </value>
+                    </nomatch>
                 </li>
                 <li Class="PatchOperationAddModExtension">
-                    <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/modExtensions</xpath>
+                    <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]</xpath>
                     <value>
                         <li Class="MedievalOverhaul.SecondaryPlantDropExtension">
                             <secondaryDrop>MSSRAG_AnimaSap</secondaryDrop>
