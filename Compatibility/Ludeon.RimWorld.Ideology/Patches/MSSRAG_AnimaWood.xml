@@ -5,8 +5,8 @@
     <Operation Class="PatchOperationAdd">
         <xpath>/Defs/ThingDef[defName="Plant_TreeAnima"]/plant</xpath>
         <value>
-            <harvestedThingDef>MSSRAG_AnimaLog</harvestedThingDef>
-            <harvestAfterGrowth>0.20</harvestAfterGrowth>
+            <harvestedThingDef>MSSRAG_AnimaSap</harvestedThingDef>
+            <harvestAfterGrowth>0.40</harvestAfterGrowth>
             <dieIfLeafless>False</dieIfLeafless>
             <harvestTag>Standard</harvestTag>
             <harvestYield>1</harvestYield>
