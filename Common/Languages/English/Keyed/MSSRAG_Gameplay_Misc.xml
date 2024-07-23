@@ -4,7 +4,8 @@
     <MSSRAG_SettingsCategory>Ragnarök</MSSRAG_SettingsCategory>
     <MSSRAG_Settings_RemovePawnRewards>Remove pawns as possible quest rewards.</MSSRAG_Settings_RemovePawnRewards>
     <MSSRAG_Settings_RemoveSun>Remove the sun</MSSRAG_Settings_RemoveSun>
-    
+    <MSSRAG_Settings_RecreateAnimaTrees>Regenerate Anima Trees</MSSRAG_Settings_RecreateAnimaTrees>
+
     <MSSRAG_AnimaProduceFloatMenu>Anima tree cultivation product</MSSRAG_AnimaProduceFloatMenu>
     <MSSRAG_ChangeAnimaProduct>Change cultivation product</MSSRAG_ChangeAnimaProduct>
     <MSSRAG_ChangeAnimaProductDesc>Choose something different cultivate</MSSRAG_ChangeAnimaProductDesc>
