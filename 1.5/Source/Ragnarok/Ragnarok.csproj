@@ -24,14 +24,6 @@
     <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp" Condition="Exists('../../../../../../../workshop/content/294100/3219596926/1.5/Assemblies/')">
-      <HintPath>../../../../../../../workshop/content/294100/3219596926/1.5/Assemblies/MedievalOverhaul.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Assembly-CSharp" Condition="Exists('../../../../../Mods/MedievalOverhaul')">
-      <HintPath>../../../../../Mods/MedievalOverhaul/1.5/Assemblies/MedievalOverhaul.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>../../../../../RimWorldWin64_Data/Managed/Assembly-CSharp.dll</HintPath>
       <Private>False</Private>

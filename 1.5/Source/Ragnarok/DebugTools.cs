@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using HarmonyLib;
 using LudeonTK;
-using MedievalOverhaul;
 using RimWorld;
 using Verse;
 
@@ -13,6 +11,8 @@ namespace Ragnarok;
 
 public static class DebugTools
 {
+    public static List<String> SkippedFields = ["thingIDNumber", "mapIndexOrState", "holdingOwner"];
+
     public static IEnumerable<FieldInfo> IterativelyGetAllFields(Type type, BindingFlags flags)
     {
         // Iterate through all the parent classes to fetch all fields
@@ -30,11 +30,12 @@ public static class DebugTools
         // Search flags to get all the fields we can. Static may not be required, and is probably even redundant
         BindingFlags searchFlags = BindingFlags.Instance | BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.FlattenHierarchy;
 
+        Map map = Find.CurrentMap;
+
         // Just in case
-        if(Find.CurrentMap == null)
+        if(map == null)
             return;
 
-        Map map = Find.CurrentMap;
 
         List<Thing> things = map.listerThings.ThingsOfDef(ThingDefOf.ArchonexusCore);
 
@@ -48,21 +49,37 @@ public static class DebugTools
             {
                 if (cell.GetThingList(map).Find(thing => thing.def == ThingDefOf.Plant_TreeAnima) is not Plant plant) continue;
 
-                int thingIdx = map.thingGrid.ThingsListAt(cell).IndexOf(plant);
-
                 // Grab all the fields we want to copy
-                Plant_SecondaryDrop plantCasted = new Plant_SecondaryDrop();
-                List<FieldInfo> allFields = IterativelyGetAllFields(plant.GetType(), searchFlags).Where(f=>!(f.IsLiteral && !f.IsInitOnly)).ToList();
+                ThingWithComps newInstance = (ThingWithComps) Activator.CreateInstance(plant.def.thingClass);
+                newInstance.def = plant.def;
 
-                foreach (FieldInfo fieldInfo in allFields)
+                // Only part of postmake we need
+                ThingIDMaker.GiveIDTo(newInstance);
+
+                IEnumerable<FieldInfo> allRelevantFields = IterativelyGetAllFields(plant.GetType(), searchFlags)
+                    .Where(f=>!(f.IsLiteral && !f.IsInitOnly))
+                    .Where(f=>!SkippedFields.Contains(f.Name));
+
+                // Set all the values, except the skipped ones
+                foreach (FieldInfo fieldInfo in allRelevantFields)
                 {
-                    fieldInfo.SetValue(plantCasted, fieldInfo.GetValue(plant));
+                    fieldInfo.SetValue(newInstance, fieldInfo.GetValue(plant));
                 }
 
-                // Both appear to be required to ensure that in game trees are replaced, and saved trees.
-                map.thingGrid.ThingsListAt(cell)[thingIdx] = plantCasted;
-                map.listerThings.AllThings[map.listerThings.AllThings.IndexOf(plant)] = plantCasted;
+                // Update comp parents.
+                // For anima tree comps at least, this is fine.
+                foreach (ThingComp newcomp in newInstance.AllComps)
+                {
+                    newcomp.parent = newInstance;
+                }
 
+                //probably not needed, but just in case
+                newInstance.PostPostMake();
+
+                // must be vanish, or the anima scream will fire.
+                // We should be able to skip this, as spawn will vanish the existing trees, but just in case.
+                plant.Destroy(DestroyMode.Vanish);
+                GenSpawn.Spawn(newInstance, cell, map, WipeMode.Vanish);
             }
         }
     }
