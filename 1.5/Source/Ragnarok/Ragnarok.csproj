@@ -53,7 +53,7 @@
     <ItemGroup>
     <PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime"/>
   </ItemGroup>
-    
+
   <ItemGroup Condition="'@(Reference->WithMetadataValue('Identity', 'Assembly-CSharp')->Metadata('HintPath')->Exists())' == ''">
     <PackageReference Include="Krafs.Rimworld.Ref" Version="1.5-*"/>
   </ItemGroup>
@@ -66,25 +66,25 @@
     <AboutFiles Include="../../../About/**" Exclude="../../../About/*.png~"/>
     <CommonFiles Include="../../../Common/**" />
     <CompatibilityFiles Include="../../../Compatibility/**" />
-    
+
     <ExtraFiles Include="../../../LoadFolders.xml;../../../LICENSE;../../../README.md" />
-    
+
     <ReleaseFiles Update="..\..\Defs\JobDefs\Jobs_Work.xml">
       <Link>Rimworld-Ragnarok\1.5\Defs\JobDefs\Jobs_Work.xml</Link>
     </ReleaseFiles>
-    
+
     <ReleaseFiles Update="..\..\Patches\MSSRAG_AnimaTreeCultivationPatch.xml">
       <Link>Rimworld-Ragnarok\1.5\Patches\MSSRAG_AnimaTreeCultivationPatch.xml</Link>
     </ReleaseFiles>
-    
+
     <ReleaseFiles Update="..\..\Defs\AnimaTreeProductDefs\AnimaTreeProductDefs.xml">
       <Link>Rimworld-Ragnarok\1.5\Defs\AnimaTreeProductDefs\AnimaTreeProductDefs.xml</Link>
     </ReleaseFiles>
-    
+
     <ReleaseFiles Update="..\..\Patches\MSSRAG_ExampleExtraButcherProducts.xml">
       <Link>Rimworld-Ragnarok\1.5\Patches\MSSRAG_ExampleExtraButcherProducts.xml</Link>
     </ReleaseFiles>
-    
+
     <ReleaseFiles Update="..\..\Defs\HediffDefs\MSSRAG_Hediffs_Tattoos.xml">
       <Link>Rimworld-Ragnarok\1.5\Defs\HediffDefs\MSSRAG_Hediffs_Tattoos.xml</Link>
     </ReleaseFiles>
@@ -95,7 +95,7 @@
     <Copy SourceFiles="@(AboutFiles)" DestinationFiles="@(AboutFiles->'../../../Release/About/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
     <Copy SourceFiles="@(CommonFiles)" DestinationFiles="@(CommonFiles->'../../../Release/Common/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
     <Copy SourceFiles="@(CompatibilityFiles)" DestinationFiles="@(CompatibilityFiles->'../../../Release/Compatibility/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
-    
+
     <Copy SourceFiles="@(ReleaseFiles)" DestinationFiles="@(ReleaseFiles->'../../../Release/%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" />
     <Copy SourceFiles="@(ExtraFiles)" DestinationFolder="../../../Release/" SkipUnchangedFiles="false" />
     <ZipDirectory DestinationFile="../../../$(AssemblyName).zip" SourceDirectory="../../../Release" />
