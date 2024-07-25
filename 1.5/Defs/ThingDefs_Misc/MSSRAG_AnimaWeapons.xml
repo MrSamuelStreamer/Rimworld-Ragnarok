@@ -25,6 +25,7 @@
     </costList>
     <weaponTags>
       <li>MSSRAGAnimaWeapon</li>
+      <li>NeolithicMeleeAdvanced</li>
     </weaponTags>
     <tools>
       <li>
@@ -51,5 +52,274 @@
         <li>CraftingSpot</li>
       </recipeUsers>
     </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>MSSRAG_Anima_Spear</defName>
+    <label>Anima Spear</label>
+    <description>A weapon formed from a large, singular branch of an anima tree, with notches made in the top and aft of the spear to embed crystalised anima sap, whittled into deadly points. This weapon contains the essence of the tree that was felled to create it.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/AnimaSpear</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.75</drawSize>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <equippedAngleOffset>-25</equippedAngleOffset>
+    <stuffCategories />
+    <costStuffCount />
+    <statBases>
+      <MaxHitPoints>240</MaxHitPoints>
+      <MarketValue>900</MarketValue>
+      <WorkToMake>5200</WorkToMake>
+      <Mass>2.5</Mass>
+    </statBases>
+    <costList>
+      <MSSRAG_AnimaLog>1</MSSRAG_AnimaLog>
+      <MSSRAG_AnimaSap>1</MSSRAG_AnimaSap>
+      <AnimaFiber MayRequire="xrushha.animagear">15</AnimaFiber>
+    </costList>
+    <weaponTags>
+      <li>MSSRAGAnimaWeapon</li>
+      <li>NeolithicMeleeAdvanced</li>
+      <li>Spear</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>shaft</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>28</power>
+        <armorPenetration>0.65</armorPenetration>
+        <cooldownTime>3.0</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>20</power>
+        <armorPenetration>0.25</armorPenetration>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>MSSRAG_Anima_Sword</defName>
+    <label>Anima Sword</label>
+    <description>A razor sharp sword chipped out of a large piece of anima sap, and mounted to anima wood using bindings. This weapon contains the essence of the tree that was felled to create it.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/AnimaSword</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories />
+    <costStuffCount />
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <MarketValue>750</MarketValue>
+      <WorkToMake>3500</WorkToMake>
+      <Mass>1.25</Mass>
+    </statBases>
+    <costList>
+      <MSSRAG_AnimaLog>1</MSSRAG_AnimaLog>
+      <MSSRAG_AnimaSap>1</MSSRAG_AnimaSap>
+      <AnimaFiber MayRequire="xrushha.animagear">15</AnimaFiber>
+    </costList>
+    <weaponTags>
+      <li>MSSRAGAnimaWeapon</li>
+      <li>NeolithicMeleeAdvanced</li>
+      <li>LongSword</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>13</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>28</power>
+        <cooldownTime>3.2</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>27</power>
+        <cooldownTime>2.9</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>MSSRAG_Anima_Scythe</defName>
+    <label>Anima Scythe</label>
+    <description>An unwieldy farming implement that doubles up as a fearsome, but cumbersome, weapon. This weapon contains the essence of the tree that was felled to create it.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/AnimaScythe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>2</drawSize>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories />
+    <costStuffCount />
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <MarketValue>950</MarketValue>
+      <WorkToMake>5500</WorkToMake>
+      <Mass>3.25</Mass>
+    </statBases>
+    <costList>
+      <MSSRAG_AnimaLog>1</MSSRAG_AnimaLog>
+      <MSSRAG_AnimaSap>1</MSSRAG_AnimaSap>
+      <AnimaFiber MayRequire="xrushha.animagear">15</AnimaFiber>
+    </costList>
+    <weaponTags>
+      <li>MSSRAGAnimaWeapon</li>
+      <li>NeolithicMeleeAdvanced</li>
+      <li>LongSword</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>19</power>
+        <cooldownTime>3.2</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>36</power>
+        <cooldownTime>3.5</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>26</power>
+        <cooldownTime>3</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>MSSRAG_Anima_Bow</defName>
+    <label>Anima Bow</label>
+    <description>An exceptionally resilient and powerful bow, capable of storing incredible potential without the draw stength of larger bows. This weapon contains the essence of the tree that was felled to create it.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/AnimaBow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Bow_Large</soundInteract>
+    <costList>
+      <MSSRAG_AnimaLog>1</MSSRAG_AnimaLog>
+      <MSSRAG_AnimaSap>1</MSSRAG_AnimaSap>
+      <AnimaFiber MayRequire="xrushha.animagear">15</AnimaFiber>
+    </costList>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>9000</WorkToMake>
+      <Mass>2.5</Mass>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>NeolithicRangedHeavy</li>
+      <li>NeolithicRangedChief</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Arrow_Anima</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>35.9</range>
+        <soundCast>Bow_Large</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Greatbow</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <displayPriority>530</displayPriority>
+    </recipeMaker>
+    <rotateInShelves>false</rotateInShelves>
+  </ThingDef>
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>Arrow_Anima</defName>
+    <label>Anima arrow</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/ArrowAnima</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Arrow</damageDef>
+      <damageAmountBase>25</damageAmountBase>
+      <stoppingPower>2.5</stoppingPower>
+      <armorPenetrationBase>0.35</armorPenetrationBase>
+      <speed>55</speed>
+    </projectile>
   </ThingDef>
 </Defs>
