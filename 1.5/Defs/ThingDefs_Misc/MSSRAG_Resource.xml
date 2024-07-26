@@ -118,4 +118,28 @@
       <li>ResourcesRaw</li>
     </thingCategories>
   </ThingDef>
+
+  <!--===== AnimaHeart =====-->
+  <ThingDef ParentName="ResourceBase">
+    <defName>MSSRAG_AnimaHeart</defName>
+    <label>Anima Heart</label>
+    <description>Anima Hearts are wood burls that form from extreme concentrations of anima energies produced by Anima Trees located at sources of great power. Anima Hearts can be used to bestow anima weapons with a persona.</description>
+    <graphicData>
+			<texPath>Things/Item/Resource/AnimaHeart</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <MarketValue>500</MarketValue>
+      <Mass>3.5</Mass>
+      <Flammability>0.2</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+    </statBases>
+    <burnableByRecipe>true</burnableByRecipe>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <minRewardCount>30</minRewardCount>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+  </ThingDef>
 </Defs>
