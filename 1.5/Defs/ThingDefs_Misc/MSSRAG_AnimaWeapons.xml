@@ -19,14 +19,17 @@
       <Mass>2</Mass>
     </statBases>
     <costList>
-      <MSSRAG_AnimaLog>1</MSSRAG_AnimaLog>
-      <MSSRAG_AnimaSap>1</MSSRAG_AnimaSap>
+      <MSSRAG_AnimaLog>5</MSSRAG_AnimaLog>
+      <MSSRAG_AnimaSap>5</MSSRAG_AnimaSap>
       <AnimaFiber MayRequire="xrushha.animagear">15</AnimaFiber>
     </costList>
     <weaponTags>
       <li>MSSRAGAnimaWeapon</li>
       <li>NeolithicMeleeAdvanced</li>
     </weaponTags>
+    <equippedStatOffsets>
+      <PlantWorkSpeed>0.55</PlantWorkSpeed>
+    </equippedStatOffsets>
     <tools>
       <li>
         <label>handle</label>
@@ -74,9 +77,9 @@
       <Mass>2.5</Mass>
     </statBases>
     <costList>
-      <MSSRAG_AnimaLog>1</MSSRAG_AnimaLog>
-      <MSSRAG_AnimaSap>1</MSSRAG_AnimaSap>
-      <AnimaFiber MayRequire="xrushha.animagear">15</AnimaFiber>
+      <MSSRAG_AnimaLog>8</MSSRAG_AnimaLog>
+      <MSSRAG_AnimaSap>2</MSSRAG_AnimaSap>
+      <AnimaFiber MayRequire="xrushha.animagear">12</AnimaFiber>
     </costList>
     <weaponTags>
       <li>MSSRAGAnimaWeapon</li>
@@ -138,9 +141,9 @@
       <Mass>1.25</Mass>
     </statBases>
     <costList>
-      <MSSRAG_AnimaLog>1</MSSRAG_AnimaLog>
-      <MSSRAG_AnimaSap>1</MSSRAG_AnimaSap>
-      <AnimaFiber MayRequire="xrushha.animagear">15</AnimaFiber>
+      <MSSRAG_AnimaLog>3</MSSRAG_AnimaLog>
+      <MSSRAG_AnimaSap>7</MSSRAG_AnimaSap>
+      <AnimaFiber MayRequire="xrushha.animagear">6</AnimaFiber>
     </costList>
     <weaponTags>
       <li>MSSRAGAnimaWeapon</li>
@@ -200,15 +203,19 @@
       <Mass>3.25</Mass>
     </statBases>
     <costList>
-      <MSSRAG_AnimaLog>1</MSSRAG_AnimaLog>
-      <MSSRAG_AnimaSap>1</MSSRAG_AnimaSap>
-      <AnimaFiber MayRequire="xrushha.animagear">15</AnimaFiber>
+      <MSSRAG_AnimaLog>6</MSSRAG_AnimaLog>
+      <MSSRAG_AnimaSap>6</MSSRAG_AnimaSap>
+      <AnimaFiber MayRequire="xrushha.animagear">8</AnimaFiber>
     </costList>
     <weaponTags>
       <li>MSSRAGAnimaWeapon</li>
       <li>NeolithicMeleeAdvanced</li>
       <li>LongSword</li>
     </weaponTags>
+    <equippedStatOffsets>
+      <PlantHarvestYield>0.25</PlantHarvestYield>
+      <PlantWorkSpeed>0.45</PlantWorkSpeed>
+    </equippedStatOffsets>
     <tools>
       <li>
         <label>handle</label>
@@ -252,9 +259,9 @@
     </graphicData>
     <soundInteract>Bow_Large</soundInteract>
     <costList>
-      <MSSRAG_AnimaLog>1</MSSRAG_AnimaLog>
-      <MSSRAG_AnimaSap>1</MSSRAG_AnimaSap>
-      <AnimaFiber MayRequire="xrushha.animagear">15</AnimaFiber>
+      <MSSRAG_AnimaLog>6</MSSRAG_AnimaLog>
+      <MSSRAG_AnimaSap>5</MSSRAG_AnimaSap>
+      <AnimaFiber MayRequire="xrushha.animagear">12</AnimaFiber>
     </costList>
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>

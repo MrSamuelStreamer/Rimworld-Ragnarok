@@ -4,7 +4,7 @@
     <ThingDef ParentName="ApparelNoQualityBase">
         <defName>MSSRAG_ThrowableTorchPack</defName>
         <label>a pack of throwable torches</label>
-        <description>Lit torches you can throw that will provide a some light where it lands for a period of timme.</description>
+        <description>Lit torches you can throw that will provide a some light where it lands for a period of time.</description>
         <techLevel>Neolithic</techLevel>
         <mergeVerbGizmos>false</mergeVerbGizmos>
         <graphicData>
@@ -16,7 +16,7 @@
             <li Class="CompProperties_ApparelReloadable">
                 <soundReload>Standard_Reload</soundReload>
                 <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-                <maxCharges>6</maxCharges>
+                <maxCharges>5</maxCharges>
                 <ammoDef>WoodLog</ammoDef>
                 <ammoCountToRefill>100</ammoCountToRefill>
                 <chargeNoun>torch</chargeNoun>
@@ -28,7 +28,7 @@
                 <label>throw torch</label>
                 <defaultProjectile>MSSRAG_TorchProjectile</defaultProjectile>
                 <warmupTime>1.5</warmupTime>
-                <range>14.0</range>
+                <range>10.0</range>
                 <burstShotCount>1</burstShotCount>
                 <onlyManualCast>true</onlyManualCast>
                 <hasStandardCommand>true</hasStandardCommand>
