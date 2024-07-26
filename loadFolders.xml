@@ -5,6 +5,6 @@
     <li>1.5</li>
     <li IfModActive="Ludeon.RimWorld.Ideology">Compatibility/Ludeon.RimWorld.Ideology</li>
     <li IfModActive="levefun.therealflamberg">Compatibility/levefun.therealflamberg</li>
-    <li IfModActive="Ludeon.RimWorld.Anomaly">Compatibility/Ludeon.RimWorld.Anomaly</li>
+    <li IfModActive="vanillaexpanded.vee">Compatibility/vanillaexpanded.vee</li>
   </v1.5>
 </loadFolders>
