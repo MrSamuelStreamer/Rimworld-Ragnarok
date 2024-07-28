@@ -11,4 +11,7 @@
     <MSSRAG_ChangeAnimaProductDesc>Choose something different cultivate</MSSRAG_ChangeAnimaProductDesc>
     <MSSRAG_NoProduce>Do not produce</MSSRAG_NoProduce>
     <MSSRAG_NotResearched>(Not Researched) {0}</MSSRAG_NotResearched>
+
+    <MSSRAG_LetterLabelRavensVisit>The Ravens</MSSRAG_LetterLabelRavensVisit>
+    <MSSRAG_LetterRavensVisit>On darkened wing, {0} and {1} have entered the area. Their purpose here is beyond the ken of mortal men.</MSSRAG_LetterRavensVisit>
 </LanguageData>

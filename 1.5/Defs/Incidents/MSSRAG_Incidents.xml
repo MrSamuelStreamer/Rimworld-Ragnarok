@@ -15,4 +15,17 @@
         <pointsScaleable>false</pointsScaleable>
     </IncidentDef>
 
+    <IncidentDef>
+        <!-- Remember to always prefix your defs! -->
+        <defName>MSSRAG_Incident_RavensVisit</defName>
+        <label>Ravens Visit</label>
+        <category>Misc</category>
+        <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <baseChance>0.7</baseChance>
+        <minRefireDays>13</minRefireDays>
+        <workerClass>Ragnarok.IncidentWorker_RavensVisit</workerClass>
+    </IncidentDef>
+
 </Defs>
