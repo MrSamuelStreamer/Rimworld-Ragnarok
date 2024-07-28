@@ -38,7 +38,7 @@
         <defName>AnimaWarArm</defName>
         <Product>AnimaWarArm</Product>
         <ProduceCount>1</ProduceCount>
-        <CultivationWorkToProduce>5000</CultivationWorkToProduce>
+        <CultivationWorkToProduce>6000</CultivationWorkToProduce>
         <ResearchPrerequisites>
             <li>AnimaImplants</li>
         </ResearchPrerequisites>
@@ -49,7 +49,7 @@
         <defName>AnimaEntArm</defName>
         <Product>AnimaEntArm</Product>
         <ProduceCount>1</ProduceCount>
-        <CultivationWorkToProduce>5000</CultivationWorkToProduce>
+        <CultivationWorkToProduce>6000</CultivationWorkToProduce>
         <ResearchPrerequisites>
             <li>AnimaImplants</li>
         </ResearchPrerequisites>
@@ -60,7 +60,29 @@
         <defName>AnimaHorn</defName>
         <Product>AnimaHorn</Product>
         <ProduceCount>1</ProduceCount>
-        <CultivationWorkToProduce>5000</CultivationWorkToProduce>
+        <CultivationWorkToProduce>7500</CultivationWorkToProduce>
+        <ResearchPrerequisites>
+            <li>AnimaImplants</li>
+        </ResearchPrerequisites>
+        <KeepProducing>false</KeepProducing>
+    </Ragnarok.Anima.AnimaTreeProductDef>
+
+    <Ragnarok.Anima.AnimaTreeProductDef MayRequire="Seti.Victor.AnimaBodies">
+        <defName>AnimaNose</defName>
+        <Product>AnimaNose</Product>
+        <ProduceCount>1</ProduceCount>
+        <CultivationWorkToProduce>3000</CultivationWorkToProduce>
+        <ResearchPrerequisites>
+            <li>AnimaImplants</li>
+        </ResearchPrerequisites>
+        <KeepProducing>false</KeepProducing>
+    </Ragnarok.Anima.AnimaTreeProductDef>
+
+    <Ragnarok.Anima.AnimaTreeProductDef MayRequire="Seti.Victor.AnimaBodies">
+        <defName>AnimaJaw</defName>
+        <Product>AnimaJaw</Product>
+        <ProduceCount>1</ProduceCount>
+        <CultivationWorkToProduce>2500</CultivationWorkToProduce>
         <ResearchPrerequisites>
             <li>AnimaImplants</li>
         </ResearchPrerequisites>
