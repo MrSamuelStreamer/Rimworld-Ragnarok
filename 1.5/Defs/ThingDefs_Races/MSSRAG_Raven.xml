@@ -8,8 +8,8 @@
         <statBases>
             <MoveSpeed>5.5</MoveSpeed>
             <MarketValue>200</MarketValue>
-            <ComfyTemperatureMin>-8</ComfyTemperatureMin>
-            <ComfyTemperatureMax>50</ComfyTemperatureMax>
+            <ComfyTemperatureMin>-1000</ComfyTemperatureMin>
+            <ComfyTemperatureMax>200</ComfyTemperatureMax>
             <FilthRate>8</FilthRate>
         </statBases>
         <race>
@@ -165,8 +165,8 @@
         <statBases>
             <MoveSpeed>6.0</MoveSpeed>
             <MarketValue>250</MarketValue>
-            <ComfyTemperatureMin>-8</ComfyTemperatureMin>
-            <ComfyTemperatureMax>50</ComfyTemperatureMax>
+            <ComfyTemperatureMin>-1000</ComfyTemperatureMin>
+            <ComfyTemperatureMax>200</ComfyTemperatureMax>
             <FilthRate>8</FilthRate>
         </statBases>
         <race>
