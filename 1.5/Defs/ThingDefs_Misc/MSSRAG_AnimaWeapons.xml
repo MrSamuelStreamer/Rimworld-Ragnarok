@@ -329,4 +329,48 @@
       <speed>55</speed>
     </projectile>
   </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>MSSRAG_Anima_Shield</defName>
+    <label>Anima Shield</label>
+    <description>A shield hewn out of the planks of an anima tree, and inlayed with runes made of pure anima sap. This shield contains the essence of the tree that was felled to create it.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/AnimaShield</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories />
+    <costStuffCount />
+    <statBases>
+      <MaxHitPoints>580</MaxHitPoints>
+      <MarketValue>510</MarketValue>
+      <WorkToMake>5800</WorkToMake>
+      <Mass>2.5</Mass>
+    </statBases>
+    <costList>
+      <MSSRAG_AnimaLog>10</MSSRAG_AnimaLog>
+      <MSSRAG_AnimaSap>2</MSSRAG_AnimaSap>
+      <AnimaFiber MayRequire="xrushha.animagear">25</AnimaFiber>
+    </costList>
+    <weaponTags>
+      <li>MSSRAGAnimaWeapon</li>
+      <li>NeolithicMeleeAdvanced</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>front</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>26</power>
+        <cooldownTime>3.2</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
 </Defs>
