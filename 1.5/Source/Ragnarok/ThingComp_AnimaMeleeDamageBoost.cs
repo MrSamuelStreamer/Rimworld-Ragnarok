@@ -21,7 +21,7 @@ public class StatPart_AnimaStatBoost : StatPart
 {
     public override void TransformValue(StatRequest req, ref float val)
     {
-        if (req.Thing?.TryGetComp<CompAnimaStatBoost>() is not {} comp) return;
+        if (req.Thing?.TryGetComp<CompAnimaStatBoost>() is not {} comp || comp.Props.statDef != parentStat) return;
         val *= comp.GetAnimaFactor();
     }
 

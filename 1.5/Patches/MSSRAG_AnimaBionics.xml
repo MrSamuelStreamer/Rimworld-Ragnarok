@@ -3,14 +3,25 @@
 <Patch>
     <!-- Add a new stat part to stats we want to tweak for number of anima implants -->
     <Operation Class="PatchOperationConditional">
-        <xpath>/Defs/StatDef[defName="PlantWorkSpeed"]/comps</xpath>
+        <xpath>/Defs/StatDef[defName="PlantWorkSpeed"]/parts</xpath>
         <nomatch Class="PatchOperationAdd">
             <xpath>/Defs/StatDef[defName="PlantWorkSpeed"]</xpath>
             <value><parts/></value>
         </nomatch>
     </Operation>
     <Operation Class="PatchOperationAdd">
-        <xpath>/Defs/StatDef[defName="PlantWorkSpeed"]</xpath>
+        <xpath>/Defs/StatDef[defName="PlantWorkSpeed"]/parts</xpath>
+        <value><li Class="Ragnarok.StatPart_AnimaStatBoost"/></value>
+    </Operation>
+    <Operation Class="PatchOperationConditional">
+        <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]/parts</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]</xpath>
+            <value><parts/></value>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]/parts</xpath>
         <value><li Class="Ragnarok.StatPart_AnimaStatBoost"/></value>
     </Operation>
 </Patch>
