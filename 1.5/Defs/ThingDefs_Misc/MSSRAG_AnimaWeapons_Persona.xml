@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RulePackDef>
+    <defName>NamerWeaponAnimalink</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_weapon_name(p=4)->[suffix][whitespace][noun][verber]</li>
+        <li>r_weapon_name(p=3)->[suffix][whitespace][verber]</li>
+        <li>r_weapon_name(p=2)->[suffix][whitespace][noun]</li>
+        <li>r_weapon_name(p=1)->[suffix][whitespace][NamePerson]</li>
+        <li>whitespace -> </li>
+        <!-- let me have my fun -->
+        <li>suffix->big</li>
+        <li>suffix->large</li>
+        <li>suffix->girth</li>
+        <li>suffix->long</li>
+        <li>suffix->hard</li>
+        <li>suffix->massive</li>
+        <li>suffix->enormous</li>
+        <li>suffix->wow, it's</li>
+        <li>suffix->terrific</li>
+        <li>suffix->small</li>
+        <li>suffix->limp</li>
+        <li>suffix->tiny</li>
+        <li>suffix->pathetic</li>
+        <li>suffix->feeble</li>
+        <li>suffix->petite</li>
+        <li>noun->sacred</li>
+        <li>noun->bright</li>
+        <li>noun->life</li>
+        <li>noun->bloom</li>
+        <li>noun->warmth</li>
+        <li>noun->heat</li>
+        <li>noun->safety</li>
+        <li>noun->sanctuary</li>
+        <li>noun->home</li>
+        <li>noun->oak</li>
+        <li>noun->yew</li>
+        <li>noun->ash</li>
+        <li>noun->tree</li>
+        <li>noun->trunk</li>
+        <li>noun->leaf</li>
+        <li>noun->root</li>
+        <li>noun->wood</li>
+        <li>noun->log</li>
+        <li>noun->growth</li>
+        <li>verber->keeper</li>
+        <li>verber->bringer</li>
+        <li>verber->preserver</li>
+        <li>verber->giver</li>
+        <li>verber->maker</li>
+        <li>verber->saver</li>
+        <li>verber->guardian</li>
+        <li>verber->knower</li>
+        <li>verber->protector</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <ThingDef Name="BaseWeapon_Animalink" ParentName="BaseWeapon" Abstract="True">
+    <techLevel>Medieval</techLevel>
+    <tradeNeverStack>true</tradeNeverStack>
+    <relicChance>3</relicChance>
+    <weaponTags>
+      <li>Bladelink</li>
+    </weaponTags>
+    <tradeTags>
+      <li>WeaponMelee</li>
+    </tradeTags>
+    <weaponClasses>
+      <li>Medieval</li>
+    </weaponClasses>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_BladelinkWeapon">
+        <biocodeOnEquip>true</biocodeOnEquip>
+      </li>
+      <li Class="CompProperties_GeneratedName">
+        <nameMaker>NamerWeaponAnimalink</nameMaker>
+      </li>
+    </comps>
+    <smeltable>true</smeltable> <!-- technically makes no sense, but allows you to rebind weapons -->
+    <burnableByRecipe>true</burnableByRecipe>
+    <notifyMapRemoved>true</notifyMapRemoved>
+    <thingCategories>
+      <li>NamerWeaponBladelink</li>
+    </thingCategories>
+    <thingSetMakerTags>
+      <li>WeaponBladelink</li>
+    </thingSetMakerTags>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeapon_Animalink">
+    <defName>MSSRAG_Anima_AxeAnimaLink</defName>
+    <label>AnimaLink Axe</label>
+    <description>A weapon formed from the branches of an anima tree, with crystalised anima sap forming the edge of the blade. The essence contained within has been awaken with an anima heart, and now it communicates and empowers it's wielder.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/AnimaAxeLink</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <MarketValue>1210</MarketValue>
+      <WorkToMake>6800</WorkToMake>
+      <Mass>2</Mass>
+    </statBases>
+    <costList>
+      <MSSRAG_AnimaHeart>1</MSSRAG_AnimaHeart>
+      <MSSRAG_Anima_Axe>1</MSSRAG_Anima_Axe>
+      <AnimaFiber MayRequire="xrushha.animagear">25</AnimaFiber>
+    </costList>
+    <weaponTags>
+      <li>MSSRAGAnimaWeapon</li>
+      <li>NeolithicMeleeAdvanced</li>
+    </weaponTags>
+    <equippedStatOffsets>
+      <PlantWorkSpeed>0.25</PlantWorkSpeed>
+    </equippedStatOffsets>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <labelUsedInLogging>false</labelUsedInLogging>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>25</power>
+        <cooldownTime>2.15</cooldownTime>
+        <armorPenetration>0.4</armorPenetration>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef> 
+
+  <ThingDef ParentName="BaseWeapon_Animalink">
+    <defName>MSSRAG_Anima_Spearlink</defName>
+    <label>Animalink Spear</label>
+    <description>A weapon formed from a large, singular branch of an anima tree, with notches made in the top and aft of the spear to embed crystalised anima sap, whittled into deadly points. The essence contained within has been awaken with an anima heart, and now it communicates and empowers it's wielder.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/AnimaSpearLink</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.75</drawSize>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <equippedAngleOffset>-25</equippedAngleOffset>
+    <stuffCategories />
+    <costStuffCount />
+    <statBases>
+      <MaxHitPoints>440</MaxHitPoints>
+      <MarketValue>1200</MarketValue>
+      <WorkToMake>7200</WorkToMake>
+      <Mass>3.5</Mass>
+    </statBases>
+    <costList>
+      <MSSRAG_Anima_Spear>1</MSSRAG_Anima_Spear>
+      <MSSRAG_AnimaHeart>1</MSSRAG_AnimaHeart>
+      <AnimaFiber MayRequire="xrushha.animagear">26</AnimaFiber>
+    </costList>
+    <weaponTags>
+      <li>MSSRAGAnimaWeapon</li>
+      <li>NeolithicMeleeAdvanced</li>
+      <li>Spear</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>shaft</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>24</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>32</power>
+        <armorPenetration>0.75</armorPenetration>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeapon_Animalink">
+    <defName>MSSRAG_Anima_Swordlink</defName>
+    <label>Animalink Sword</label>
+    <description>A razor sharp sword chipped out of a large piece of anima sap, and mounted to anima wood using bindings. The essence contained within has been awaken with an anima heart, and now it communicates and empowers it's wielder.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/AnimaSwordLink</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories />
+    <costStuffCount />
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <MarketValue>950</MarketValue>
+      <WorkToMake>4500</WorkToMake>
+      <Mass>1.35</Mass>
+    </statBases>
+    <costList>
+      <MSSRAG_Anima_Sword>1</MSSRAG_Anima_Sword>
+      <MSSRAG_AnimaHeart>1</MSSRAG_AnimaHeart>
+      <AnimaFiber MayRequire="xrushha.animagear">20</AnimaFiber>
+    </costList>
+    <weaponTags>
+      <li>MSSRAGAnimaWeapon</li>
+      <li>NeolithicMeleeAdvanced</li>
+      <li>LongSword</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>2.0</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>32</power>
+        <cooldownTime>3.0</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>32</power>
+        <cooldownTime>2.2</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeapon_Animalink">
+    <defName>MSSRAG_Anima_Scythelink</defName>
+    <label>Animalink Scythe</label>
+    <description>An unwieldy farming implement that doubles up as a fearsome, but cumbersome, weapon. The essence contained within has been awaken with an anima heart, and now it communicates and empowers it's wielder.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/AnimaScytheLink</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>2</drawSize>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories />
+    <costStuffCount />
+    <statBases>
+      <MaxHitPoints>700</MaxHitPoints>
+      <MarketValue>1150</MarketValue>
+      <WorkToMake>7500</WorkToMake>
+      <Mass>3.45</Mass>
+    </statBases>
+    <costList>
+      <MSSRAG_Anima_Spear>1</MSSRAG_Anima_Spear>
+      <MSSRAG_AnimaHeart>6</MSSRAG_AnimaHeart>
+      <AnimaFiber MayRequire="xrushha.animagear">24</AnimaFiber>
+    </costList>
+    <weaponTags>
+      <li>MSSRAGAnimaWeapon</li>
+      <li>NeolithicMeleeAdvanced</li>
+      <li>LongSword</li>
+    </weaponTags>
+    <equippedStatOffsets>
+      <PlantHarvestYield>0.20</PlantHarvestYield>
+      <PlantWorkSpeed>0.35</PlantWorkSpeed>
+    </equippedStatOffsets>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>24</power>
+        <cooldownTime>3.0</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>40</power>
+        <cooldownTime>3.1</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>36</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeapon_Animalink">
+    <defName>MSSRAG_Anima_Bowlink</defName>
+    <label>Animalink Bow</label>
+    <description>An exceptionally resilient and powerful bow, capable of storing incredible potential without the draw stength of larger bows. The essence contained within has been awaken with an anima heart, and now it communicates and empowers it's wielder.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/AnimaBowLink</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Bow_Large</soundInteract>
+    <costList>
+      <MSSRAG_Anima_Bow>1</MSSRAG_Anima_Bow>
+      <MSSRAG_AnimaHeart>1</MSSRAG_AnimaHeart>
+      <AnimaFiber MayRequire="xrushha.animagear">22</AnimaFiber>
+    </costList>
+    <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+    <statBases>
+      <WorkToMake>9500</WorkToMake>
+      <Mass>2.8</Mass>
+      <AccuracyTouch>0.78</AccuracyTouch>
+      <AccuracyShort>0.88</AccuracyShort>
+      <AccuracyMedium>0.88</AccuracyMedium>
+      <AccuracyLong>0.78</AccuracyLong>
+      <RangedWeapon_Cooldown>1.1</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>NeolithicRangedHeavy</li>
+      <li>NeolithicRangedChief</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>Ranged</li>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Arrow_Anima</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>38.9</range>
+        <soundCast>Bow_Large</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>1.7</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <researchPrerequisite>Greatbow</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+      <displayPriority>530</displayPriority>
+    </recipeMaker>
+    <rotateInShelves>false</rotateInShelves>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeapon_Animalink">
+    <defName>MSSRAG_Anima_Shieldlink</defName>
+    <label>Animalink Shield</label>
+    <description>A shield hewn out of the planks of an anima tree, and inlayed with runes made of pure anima sap. The essence contained within has been awaken with an anima heart, and now it communicates and empowers it's wielder.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/AnimaShieldLink</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories />
+    <costStuffCount />
+    <statBases>
+      <MaxHitPoints>1580</MaxHitPoints>
+      <MarketValue>710</MarketValue>
+      <WorkToMake>7200</WorkToMake>
+      <Mass>3.8</Mass>
+    </statBases>
+    <costList>
+      <MSSRAG_Anima_Shield>1</MSSRAG_Anima_Shield>
+      <MSSRAG_AnimaHeart>2</MSSRAG_AnimaHeart>
+      <AnimaFiber MayRequire="xrushha.animagear">35</AnimaFiber>
+    </costList>
+    <weaponTags>
+      <li>MSSRAGAnimaWeapon</li>
+      <li>NeolithicMeleeAdvanced</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>front</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>56</power>
+        <cooldownTime>6.0</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+</Defs>
