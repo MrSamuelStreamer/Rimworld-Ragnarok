@@ -55,6 +55,18 @@
         <li>CraftingSpot</li>
       </recipeUsers>
     </recipeMaker>
+      <comps>
+        <li Class="Ragnarok.CompProperties_AnimaStatBoost">
+          <statDef>PlantWorkSpeed</statDef>
+          <factorPerHediff>0.2</factorPerHediff>
+            <relevantHediffs>
+                <li MayRequire="Seti.Victor.AnimaBodies">AnimaPlate</li>
+                <li MayRequire="Seti.Victor.AnimaBodies">AnimaLiver</li>
+                <li MayRequire="Seti.Victor.AnimaBodies">AnimaKidney</li>
+                <li MayRequire="Seti.Victor.AnimaBodies">AnimaLung</li>
+            </relevantHediffs>
+        </li>
+      </comps>
   </ThingDef>
 
   <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
