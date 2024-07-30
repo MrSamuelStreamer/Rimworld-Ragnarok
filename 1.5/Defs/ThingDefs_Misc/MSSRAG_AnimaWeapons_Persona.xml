@@ -145,7 +145,7 @@
         <li>CraftingSpot</li>
       </recipeUsers>
       <skillRequirements>
-        <Crafting>15</Crafting>
+        <Crafting>8</Crafting>
       </skillRequirements>
     </recipeMaker>
   </ThingDef> 
@@ -204,7 +204,7 @@
         <li>CraftingSpot</li>
       </recipeUsers>
       <skillRequirements>
-        <Crafting>15</Crafting>
+        <Crafting>8</Crafting>
       </skillRequirements>
     </recipeMaker>
   </ThingDef>
@@ -268,7 +268,7 @@
         <li>CraftingSpot</li>
       </recipeUsers>
       <skillRequirements>
-        <Crafting>15</Crafting>
+        <Crafting>8</Crafting>
       </skillRequirements>
     </recipeMaker>
   </ThingDef>
@@ -337,7 +337,7 @@
         <li>CraftingSpot</li>
       </recipeUsers>
       <skillRequirements>
-        <Crafting>15</Crafting>
+        <Crafting>8</Crafting>
       </skillRequirements>
     </recipeMaker>
   </ThingDef>
@@ -401,7 +401,7 @@
       </recipeUsers>
       <researchPrerequisite>Greatbow</researchPrerequisite>
       <skillRequirements>
-        <Crafting>15</Crafting>
+        <Crafting>8</Crafting>
       </skillRequirements>
       <displayPriority>530</displayPriority>
     </recipeMaker>
@@ -450,7 +450,7 @@
         <li>CraftingSpot</li>
       </recipeUsers>
       <skillRequirements>
-        <Crafting>15</Crafting>
+        <Crafting>8</Crafting>
       </skillRequirements>
     </recipeMaker>
   </ThingDef>
