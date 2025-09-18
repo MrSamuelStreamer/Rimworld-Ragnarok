@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/BiomeDef/wildAnimals</xpath>
+        <value>
+            <MSSRAG_Huginn>0.05</MSSRAG_Huginn>
+            <MSSRAG_Muninn>0.05</MSSRAG_Muninn>
+        </value>
+    </Operation>
+</Patch>

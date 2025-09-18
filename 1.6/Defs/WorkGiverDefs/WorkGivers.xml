@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <WorkGiverDef>
+    <defName>CultivateAnimaTree</defName>
+    <label>Cultivate Anima Trees</label>
+    <giverClass>Ragnarok.Anima.WorkGiver_CultivateAnimaTree</giverClass>
+    <workType>PlantCutting</workType>
+    <verb>prune</verb>
+    <gerund>cultivating</gerund>
+    <priorityInType>25</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <canBeDoneByMechs>false</canBeDoneByMechs>
+  </WorkGiverDef>
+</Defs>

@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <SurgeryOutcomeEffectDef ParentName="SurgeryOutcomeBase">
+        <defName>MSSRAG_TattooVeryMinor</defName>
+        <outcomes Inherit="False">
+            <li Class="SurgeryOutcomeSuccess" />
+            <li Class="SurgeryOutcome_Failure">
+                <failure>true</failure>
+                <totalDamage>5</totalDamage>
+                <applyEffectsToPart>true</applyEffectsToPart>
+                <letterLabel>Failed to tattoo {PATIENT_labelShort}</letterLabel>
+                <letterText>{SURGEON_labelShort} has failed in a minor way while tattooing {PATIENT_labelShort} with a ({RECIPE_label}).</letterText>
+            </li>
+        </outcomes>
+    </SurgeryOutcomeEffectDef>
+    
+    <HediffDef>
+        <defName>MSSRAG_Voidsight</defName>
+        <label>voidsight tattoo</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <description>This person has a bioferrite tattoo that has enhanced their perception of dark psychic phenomena. They will gain more knowledge when studying dark psychic phenomena and entities. Their psychic sensitivity is also increased.</description>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+            <li Class="Ragnarok.Tattoo.HediffCompProperties_Tattoo">
+                <TattooType>Body</TattooType> <!-- Make sure this is synced up with appliedOnFixedBodyParts on the recipe-->
+                <OverrideExistingTattoo>true</OverrideExistingTattoo>
+                <!-- <Tattoo>AnOptionalTattooDef</Tattoo> -->
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statFactors>
+                    <StudyEfficiency>1.10</StudyEfficiency>
+                    <PsychicSensitivity>1.10</PsychicSensitivity>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>MSSRAG_GiveVoidsightTattoo</defName>
+        <label>give voidsight tattoo</label>
+        <description>Give a Voidsight tattoo.</description>
+        <descriptionHyperlinks>
+            <HediffDef>MSSRAG_Voidsight</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Tattooing a voidsight tattoo.</jobString>
+        
+        <anesthetize>false</anesthetize>
+        
+        <appliedOnFixedBodyParts>
+            <li>Torso</li>
+        </appliedOnFixedBodyParts>
+        
+        <skillRequirements Inherit="False">
+            <Artistic>5</Artistic>
+        </skillRequirements>
+        
+        <surgeryOutcomeEffect>MSSRAG_TattooVeryMinor</surgeryOutcomeEffect>
+        
+        <researchPrerequisite>MSSRAG_Tattoos</researchPrerequisite>
+        
+        <ingredients Inherit="false">
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Bioferrite</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Bioferrite</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        
+        <addsHediff>MSSRAG_Voidsight</addsHediff>
+    </RecipeDef>
+    
+    <HediffDef>
+        <defName>MSSRAG_Metalblood</defName>
+        <label>metalblood tattoo</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <description>This creature has a bioferrite tattoo that infuses the bloodstream with metalblood compound. This substance can rapidly harden the flesh when it anticipates a blow, making the user more resistant to damage. However, the bioferrite-based chemistry of this tattoo also makes the user particularly vulnerable to fire.</description>
+        <skinShader>Metalblood</skinShader>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+            <li Class="Ragnarok.Tattoo.HediffCompProperties_Tattoo">
+                <TattooType>Body</TattooType> <!-- Make sure this is synced up with appliedOnFixedBodyParts on the recipe-->
+                <OverrideExistingTattoo>true</OverrideExistingTattoo>
+                <!-- <Tattoo>AnOptionalTattooDef</Tattoo> -->
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statFactors>
+                    <IncomingDamageFactor>0.8</IncomingDamageFactor>
+                </statFactors>
+                <damageFactors>
+                    <Flame>2</Flame>
+                    <Burn>2</Burn>
+                </damageFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>MSSRAG_GiveMetalbloodTattoo</defName>
+        <label>give metalblood tattoo</label>
+        <description>Give a Metalblood tattoo.</description>
+        <descriptionHyperlinks>
+            <HediffDef>MSSRAG_Metalblood</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Tattooing a metalblood tattoo.</jobString>
+        
+        <anesthetize>false</anesthetize>
+        
+        <appliedOnFixedBodyParts>
+            <li>Torso</li>
+        </appliedOnFixedBodyParts>
+        
+        <skillRequirements Inherit="False">
+            <Artistic>5</Artistic>
+        </skillRequirements>
+        
+        <surgeryOutcomeEffect>MSSRAG_TattooVeryMinor</surgeryOutcomeEffect>
+        
+        <researchPrerequisite>MSSRAG_Tattoos</researchPrerequisite>
+        
+        <ingredients Inherit="false">
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Bioferrite</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Bioferrite</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        
+        <addsHediff>MSSRAG_Metalblood</addsHediff>
+    </RecipeDef>
+
+    <HediffDef>
+        <defName>MSSRAG_MindNumbSerum</defName>
+        <label>mind-numb tattoo</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <description>This person's neural patterns are being moderated by a bioferrite tattoo. They're unaffected by the highs and lows of human emotion. They will never have a mental break but they will also never feel inspired.</description>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+            <li Class="Ragnarok.Tattoo.HediffCompProperties_Tattoo">
+                <TattooType>Body</TattooType> <!-- Make sure this is synced up with appliedOnFixedBodyParts on the recipe-->
+                <OverrideExistingTattoo>true</OverrideExistingTattoo>
+                <!-- <Tattoo>AnOptionalTattooDef</Tattoo> -->
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <blocksMentalBreaks>true</blocksMentalBreaks>
+                <blocksInspirations>true</blocksInspirations>
+                <pctAllThoughtNullification>0.5</pctAllThoughtNullification>
+                <overrideMoodBase>0.7</overrideMoodBase>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>MSSRAG_GiveMindNumbTattoo</defName>
+        <label>give mindnumb tattoo</label>
+        <description>Give a Mindnumb tattoo.</description>
+        <descriptionHyperlinks>
+            <HediffDef>MSSRAG_MindNumbSerum</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Tattooing a Mindnumb tattoo.</jobString>
+        
+        <anesthetize>false</anesthetize>
+        
+        <appliedOnFixedBodyParts>
+            <li>Torso</li>
+        </appliedOnFixedBodyParts>
+        
+        <skillRequirements Inherit="False">
+            <Artistic>5</Artistic>
+        </skillRequirements>
+        
+        <surgeryOutcomeEffect>MSSRAG_TattooVeryMinor</surgeryOutcomeEffect>
+        
+        <researchPrerequisite>MSSRAG_Tattoos</researchPrerequisite>
+
+        <ingredients Inherit="false">
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Bioferrite</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Bioferrite</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        
+        <addsHediff>MSSRAG_MindNumbSerum</addsHediff>
+    </RecipeDef>
+
+    <HediffDef>
+        <defName>MSSRAG_JuggernautSerum</defName>
+        <label>juggernaut tattoo</label>
+        <hediffClass>HediffWithComps</hediffClass>
+        <description>A bioferrite tattoo that super-powers this person's musculature, making them stronger and faster, but reducing their mood due to discomfort.</description>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath" />
+            <li Class="Ragnarok.Tattoo.HediffCompProperties_Tattoo">
+                <TattooType>Body</TattooType> <!-- Make sure this is synced up with appliedOnFixedBodyParts on the recipe-->
+                <OverrideExistingTattoo>true</OverrideExistingTattoo>
+                <!-- <Tattoo>AnOptionalTattooDef</Tattoo> -->
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statFactors>
+                    <MeleeDamageFactor>1.3</MeleeDamageFactor>
+                    <InjuryHealingFactor>1.6</InjuryHealingFactor>
+                </statFactors>
+                <statOffsets>
+                    <MoveSpeed>0.7</MoveSpeed>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>MSSRAG_GiveJuggernautTattoo</defName>
+        <label>give juggernaut tattoo</label>
+        <description>Give a Juggernaut tattoo.</description>
+        <descriptionHyperlinks>
+            <HediffDef>MSSRAG_JuggernautSerum</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Tattooing a Juggernaut tattoo.</jobString>
+        
+        <anesthetize>false</anesthetize>
+        
+        <appliedOnFixedBodyParts>
+            <li>Torso</li>
+        </appliedOnFixedBodyParts>
+        
+        <skillRequirements Inherit="False">
+            <Artistic>5</Artistic>
+        </skillRequirements>
+        
+        <surgeryOutcomeEffect>MSSRAG_TattooVeryMinor</surgeryOutcomeEffect>
+        
+        <researchPrerequisite>MSSRAG_Tattoos</researchPrerequisite>
+
+        <ingredients Inherit="false">
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Bioferrite</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Bioferrite</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        
+        <addsHediff>MSSRAG_JuggernautSerum</addsHediff>
+    </RecipeDef>
+</Defs>

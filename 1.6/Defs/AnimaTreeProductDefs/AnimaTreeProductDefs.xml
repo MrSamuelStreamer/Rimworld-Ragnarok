@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <Ragnarok.Anima.AnimaTreeProductDef>
+        <defName>MSSRAG_AnimaLog</defName>
+        <Product>MSSRAG_AnimaLog</Product>
+        <ProduceCount>20</ProduceCount>
+        <CultivationWorkToProduce>1500</CultivationWorkToProduce>
+        <ResearchPrerequisites>
+            <li>TreeSowing</li>
+        </ResearchPrerequisites>
+        <KeepProducing>true</KeepProducing>
+    </Ragnarok.Anima.AnimaTreeProductDef>
+
+    <Ragnarok.Anima.AnimaTreeProductDef>
+        <defName>MSSRAG_AnimaSap</defName>
+        <Product>MSSRAG_AnimaSap</Product>
+        <ProduceCount>5</ProduceCount>
+        <CultivationWorkToProduce>1000</CultivationWorkToProduce>
+        <ResearchPrerequisites>
+            <li>TreeSowing</li>
+        </ResearchPrerequisites>
+        <KeepProducing>true</KeepProducing>
+    </Ragnarok.Anima.AnimaTreeProductDef>
+
+    <Ragnarok.Anima.AnimaTreeProductDef MayRequire="Seti.Victor.AnimaBodies">
+        <defName>AnimaLeg</defName>
+        <Product>AnimaLeg</Product>
+        <ProduceCount>1</ProduceCount>
+        <CultivationWorkToProduce>5000</CultivationWorkToProduce>
+        <ResearchPrerequisites>
+            <li>AnimaImplants</li>
+        </ResearchPrerequisites>
+        <KeepProducing>false</KeepProducing>
+    </Ragnarok.Anima.AnimaTreeProductDef>
+    
+    <Ragnarok.Anima.AnimaTreeProductDef MayRequire="Seti.Victor.AnimaBodies">
+        <defName>AnimaWarArm</defName>
+        <Product>AnimaWarArm</Product>
+        <ProduceCount>1</ProduceCount>
+        <CultivationWorkToProduce>6000</CultivationWorkToProduce>
+        <ResearchPrerequisites>
+            <li>AnimaImplants</li>
+        </ResearchPrerequisites>
+        <KeepProducing>false</KeepProducing>
+    </Ragnarok.Anima.AnimaTreeProductDef>
+    
+    <Ragnarok.Anima.AnimaTreeProductDef MayRequire="Seti.Victor.AnimaBodies">
+        <defName>AnimaEntArm</defName>
+        <Product>AnimaEntArm</Product>
+        <ProduceCount>1</ProduceCount>
+        <CultivationWorkToProduce>6000</CultivationWorkToProduce>
+        <ResearchPrerequisites>
+            <li>AnimaImplants</li>
+        </ResearchPrerequisites>
+        <KeepProducing>false</KeepProducing>
+    </Ragnarok.Anima.AnimaTreeProductDef>
+    
+    <Ragnarok.Anima.AnimaTreeProductDef MayRequire="Seti.Victor.AnimaBodies">
+        <defName>AnimaHorn</defName>
+        <Product>AnimaHorn</Product>
+        <ProduceCount>1</ProduceCount>
+        <CultivationWorkToProduce>7500</CultivationWorkToProduce>
+        <ResearchPrerequisites>
+            <li>AnimaImplants</li>
+        </ResearchPrerequisites>
+        <KeepProducing>false</KeepProducing>
+    </Ragnarok.Anima.AnimaTreeProductDef>
+
+    <Ragnarok.Anima.AnimaTreeProductDef MayRequire="Seti.Victor.AnimaBodies">
+        <defName>AnimaNose</defName>
+        <Product>AnimaNose</Product>
+        <ProduceCount>1</ProduceCount>
+        <CultivationWorkToProduce>3000</CultivationWorkToProduce>
+        <ResearchPrerequisites>
+            <li>AnimaImplants</li>
+        </ResearchPrerequisites>
+        <KeepProducing>false</KeepProducing>
+    </Ragnarok.Anima.AnimaTreeProductDef>
+
+    <Ragnarok.Anima.AnimaTreeProductDef MayRequire="Seti.Victor.AnimaBodies">
+        <defName>AnimaJaw</defName>
+        <Product>AnimaJaw</Product>
+        <ProduceCount>1</ProduceCount>
+        <CultivationWorkToProduce>2500</CultivationWorkToProduce>
+        <ResearchPrerequisites>
+            <li>AnimaImplants</li>
+        </ResearchPrerequisites>
+        <KeepProducing>false</KeepProducing>
+    </Ragnarok.Anima.AnimaTreeProductDef>
+    
+</Defs>

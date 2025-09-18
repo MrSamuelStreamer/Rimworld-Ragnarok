@@ -7,4 +7,11 @@
     <li IfModActive="levefun.therealflamberg">Compatibility/levefun.therealflamberg</li>
     <li IfModActive="vanillaexpanded.vee">Compatibility/vanillaexpanded.vee</li>
   </v1.5>
+  <v1.6>
+    <li>Common</li>
+    <li>1.6</li>
+    <li IfModActive="Ludeon.RimWorld.Ideology">Compatibility/Ludeon.RimWorld.Ideology</li>
+    <li IfModActive="levefun.therealflamberg">Compatibility/levefun.therealflamberg</li>
+    <li IfModActive="vanillaexpanded.vee">Compatibility/vanillaexpanded.vee</li>
+  </v1.6>
 </loadFolders>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef>
+    <defName>MSSRAG_RerollAnima</defName>
+    <label>Extract Anima Heart</label>
+    <description>Remove the Anima Heart from the core of an Animalink weapon, allowing you to repurpose the heart, but destroying the weapon in the processes.</description>
+    <jobString>Extracting Anima Heart.</jobString>
+    <workAmount>400</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MSSRAG_Anima_AxeAnimaLink</li>
+            <li>MSSRAG_Anima_Spearlink</li>
+            <li>MSSRAG_Anima_Swordlink</li>
+            <li>MSSRAG_Anima_Scythelink</li>
+            <li>MSSRAG_Anima_Bowlink</li>
+            <li>MSSRAG_Anima_Shieldlink</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <MSSRAG_AnimaHeart>1</MSSRAG_AnimaHeart>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MSSRAG_Anima_AxeAnimaLink</li>
+        <li>MSSRAG_Anima_Spearlink</li>
+        <li>MSSRAG_Anima_Swordlink</li>
+        <li>MSSRAG_Anima_Scythelink</li>
+        <li>MSSRAG_Anima_Bowlink</li>
+        <li>MSSRAG_Anima_Shieldlink</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+</Defs>

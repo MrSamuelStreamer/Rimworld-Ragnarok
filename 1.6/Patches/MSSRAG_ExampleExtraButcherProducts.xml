@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Make butchering a chicken drop a fixed 2xPemmican, and some cloth following the normal butchering rules, but scaled up by 1.5x-->
+<!-- AdditionalButcherProducts is any number of -> defname of the thing, and a scaling factor to affect the number spawned -->
+<!-- AdditionalButcherProductsFixedValue is any number of -> defname of the thing, and a fixed number of products ignoring scaling -->
+
+<Patch>
+<!--    <Operation Class="PatchOperationAddModExtension"> 
+        <xpath>/Defs/PawnKindDef[defName='Chicken']</xpath>
+        <value>
+            <li Class="Ragnarok.Butchery.RagnarokButcherExtension">
+                <AdditionalButcherProducts>
+                    <Cloth>1.5</Cloth>
+                </AdditionalButcherProducts>
+                <AdditionalButcherProductsFixedValue>
+                    <Pemmican>2</Pemmican> 
+                </AdditionalButcherProductsFixedValue>
+            </li>
+        </value>
+    </Operation> -->
+</Patch>

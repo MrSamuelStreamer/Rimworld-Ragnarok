@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ScenarioDef ParentName="ScenarioBase">
+		<defName>MSSRAG_Ragnarok</defName>
+		<label>Ragnarok: Eternal Dakrness</label>
+		<description>The darkness has fallen and all humans across the world have perished or fled to the stars.
+
+The final survivors are your colonists, as few as they are. No others will come to be recruited or enslaved. No caravans will trade, and no survivors will visit.
+
+You are all alone.</description>
+		<scenario>
+			<summary>Ragnarok: Eternal Darkness</summary>
+			<playerFaction inherit="False">
+				<def>PlayerFaction</def>
+				<factionDef>PlayerBasicTribe</factionDef>
+			</playerFaction>
+			<parts>
+				<li Class="ScenPart_GameStartDialog">
+					<def>GameStartDialog</def>
+					<text>The darkness has fallen and all humans across the world have perished or fled to the stars.
+
+					The final survivors are your colonists, as few as they are. No others will come to be recruited or enslaved. No caravans will trade, and no survivors will visit.
+
+					You are all alone.</text>
+					<closeSound>GameStartSting</closeSound>
+				</li>
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+					<def>ConfigPage_ConfigureStartingPawns</def>
+					<pawnCount>10</pawnCount>
+					<pawnChoiceCount>10</pawnChoiceCount>
+				</li>
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>Standing</method>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Pemmican</thingDef>
+					<count>50</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Tome</thingDef>
+					<quality>Excellent</quality>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Shard</thingDef>
+				</li>
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>StartingThing_Defined</def>
+					<thingDef>Bioferrite</thingDef>
+					<count>100</count>
+					<allowRoofed>True</allowRoofed>
+				</li>
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>StartingThing_Defined</def>
+					<thingDef>WoodLog</thingDef>
+					<count>250</count>
+					<allowRoofed>True</allowRoofed>
+				</li>
+				<li Class="ScenPart_MonolithGeneration">
+					<def>ScenPart_MonolithGeneration</def>
+					<method>NearColonists</method>
+				</li>
+				<li Class="ScenPart_AutoActivateMonolith">
+					<def>AutoActivateMonolith</def>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Flamebow</thingDef>
+					<count>2</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Brazier</thingDef>
+					<stuff>Steel</stuff>
+					<count>4</count>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>WandererJoin</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>GameEndedWanderersJoin</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>WandererJoinAbasia</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>CreepJoinerJoin</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>CreepJoinerJoin_Metalhorror</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>RefugeePodCrash</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>RefugeePodCrash_Baby</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>RefugeePodCrash_Ghoul</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>CaravanMeeting</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>TraderCaravanArrival</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>RaidEnemy</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>TravelerGroup</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>OrbitalTraderArrival</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>VisitorGroup</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>WildManWandersIn</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>CaravanDemand</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>RaidFriendly</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>StrangerInBlackJoin</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>GiveQuest_EndGame_RoyalAscent</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>GiveQuest_Intro_Wimp</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>GiveQuest_Beggars</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>GiveQuest_ReliquaryPilgrims</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>WanderersSkylantern</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>GiveQuest_DistressCall</incident>
+				</li>
+				<li Class="ScenPart_DisableIncident">
+					<def>DisableIncident</def>
+					<incident>HateChanters</incident>
+				</li>
+				<li Class="ScenPart_PermaGameCondition" MayRequire="aranmaho.betterdarkness">
+					<def>PermanentGameCondition</def>
+					<gameCondition>BetterUnnaturalDarkness</gameCondition>
+				</li>
+			</parts>
+		</scenario>
+	</ScenarioDef>
+
+</Defs>

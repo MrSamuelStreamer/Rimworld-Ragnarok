@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>MSSRAG_CultivateAnimaTree</defName>
+    <driverClass>Ragnarok.Anima.JobDriver_CultivateAnimaTree</driverClass>
+    <reportString>cultivating TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+
+</Defs>
